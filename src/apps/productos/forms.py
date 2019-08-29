@@ -1,6 +1,4 @@
-from apps.productos.models import Producto
-from apps.productos.models import Categoria
-from apps.productos.models import Venta
+from apps.productos.models import Producto, Categoria, Venta, VentaProducto
 from django import forms
 
 class ProductoForm(forms.ModelForm):
@@ -78,3 +76,30 @@ class VentaForm(forms.ModelForm):
             'total': forms.TextInput(attrs={'class':'form-control'}),
             'cliente': forms.Select(attrs={'class':'form-control'}),
         }
+
+
+class VentaProductoForm(forms.ModelForm):
+    class Meta:
+        model = VentaProducto
+
+        fields = [
+            'cantidad',
+            'precio_venta',
+            'descuento',
+            'producto',
+            'venta',
+        ]
+
+        labels = {
+            'cantidad': 'Cantidad',
+            'precio_venta': 'Precio',
+            'descuento': 'Descuento',
+            'producto': 'Producto',
+            'venta': 'Venta',
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(VentaProductoForm, self).__init__(*args, **kwargs)
+
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})

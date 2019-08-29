@@ -8,6 +8,6 @@ class User(AbstractUser):
     apellido = models.CharField(max_length=40)
     correo = models.EmailField()
     nombre_usuario = models.CharField(max_length=40)
-    contraseña = models.CharField(max_length=40)
+    contrasena = models.CharField(max_length=40)
     tienda = models.ForeignKey(Tienda, models.CASCADE, null=True, blank=True)
 
