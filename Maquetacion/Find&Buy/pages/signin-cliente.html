@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registrarse</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../bs413/bootstrap.min.css" />
+        <script src="../bs413/jquery.min.js"></script>
+        <script src="../bs413/popper.min.js"></script>
+        <script src="../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../scripts/styles.css');
+	</style>
+	
+	<body id="log">
+	<center>
+	
+		<nav class="navbar navbar-expand-sm bg-dark">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../index.html">Inicio</a>
+					<a class="dropdown-item" href="ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="categorias.html">Categorias</a>
+					<a class="dropdown-item" href="menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Logo-->
+			<a href="../index.html" class="mx-auto">
+				<img src="../images/logo.png" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+ 		</nav>
+
+		<section class="card mt-4 align-middle mb-4" style="width:400px">
+ 			<div class="card-header">
+ 				<h4 class="card-title">Registrarce</h4>
+ 				<p>A continuación completar los siguientes campos para completar el registro</p>
+ 			</div>
+
+ 			<div class="card-body">
+ 				<form>
+ 					
+ 					<div class="form-group">
+ 						<h3>Cliente</h3>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="nm">Nombres</label>
+ 						<input type="text" required class="form-control" id="nm" placeholder="Escriba ambos nombres"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="ln">Apellidos</label>
+ 						<input type="text" required class="form-control" id="ln" placeholder="Escriba ambos apellidos"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="email">Correo</label>
+ 						<input type="email" required class="form-control" id="email" placeholder="Escriba su correo"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="usr">Nombre de Usuario</label>
+ 						<input type="text" required class="form-control" id="usr" placeholder="Escriba su nombre de usuario"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="psw">Contraseña</label>
+ 						<input type="password" required class="form-control" id="psw"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="sa">Dirección</label>
+ 						<input type="text" required class="form-control" id="sa" placeholder="Escriba su dirección"></input>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="sa">Número de tarjeta de credito</label>
+ 						<input type="text" required class="form-control" id="sa" placeholder="Digite aqui el número de su tarjeta"></input>
+ 						<small id="tarjeta" class="form-text text-muted">Esta información será usada solo para realizar compras, en ningun momento compartiremos sus datos personales con nadie</small>
+ 					</div>
+
+ 					<div class="form-group">
+ 						<label for="cll">Telefono</label>
+ 						<input type="text" required class="form-control" id="cll" placeholder="Digite número de telefono para contactarle"></input>
+ 					</div>
+
+ 					<button class="btn btn-success" type="submit" data-toggle="modal" data-target="#registro">Registrarse</button>
+ 					<button class="btn btn-danger" type="reset">Borrar</button>
+
+ 				</form>
+	 		</div>
+	 	</section>
+
+	 	<footer class="bg-light">
+			<div class="row">
+	 		    <div class="col mt-5">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="footer/como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="footer/garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col mt-5">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col mt-5">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="footer/seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col mt-5">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 					    		
+	 			
+	 	   	</div>
+		</footer>
+
+	 	<div class="modal fade" id="registro">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="alert alert-success text-center">
+							Su registro se ha realizado con exito
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<a href="login.html" class="btn btn-primary mx-auto">Loguearse</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</center>
+	</body>
+</html>

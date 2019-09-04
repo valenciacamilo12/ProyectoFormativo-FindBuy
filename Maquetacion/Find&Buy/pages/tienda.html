@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tienda</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../bs413/bootstrap.min.css" />
+        <script src="../bs413/jquery.min.js"></script>
+        <script src="../bs413/popper.min.js"></script>
+        <script src="../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../scripts/styles.css');
+	</style>
+	<body>
+	<center>
+
+		<!--Barra de navegador-->
+		<nav class="navbar navbar-expand-sm bg-dark ">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="tienda-index.html">Inicio</a>
+					<a class="dropdown-item" href="ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="categorias.html">Categorias</a>
+					<a class="dropdown-item" href="menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Editar y Salir-->
+			<form class="form-inline ml-5" id="boton">
+				<a href="../index.html" class="btn btn-info mr-xl-2">Cerrar sesión</a>
+				<a href="editar.html" class="btn btn-info">Editar datos de la cuenta</a>
+			</form>
+
+			<!--Logo-->
+			<a href="tienda-index.html" class="mx-auto">
+				<img src="../images/logo.png" width="100" height="50" >
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+
+ 		</nav>
+
+ 		<!--Slider-->
+ 		<header class="mb-5">
+ 			<div id="fondo" class="mx-auto">
+ 				<input type="file" class="form-control-file border" style="width: 300px; margin-top: 150px">
+ 				<small class="text-muted">Escoga una foto para su portada</small>
+ 			</div>
+
+ 			<div id="foto">
+ 				<input type="file" class="form-control-file border" style="width: 200px; margin-top: 50px">
+ 				<small class="text-body">Escoga una foto para su perfil</small>
+ 			</div>
+ 			<h1>Nombre de Tienda</h1>
+ 		</header>
+
+ 		<hr>
+
+ 		<section>
+
+ 			<h1>Desctacados</h1>
+
+ 			<button type="button" class="btn btn-primary btn-lg mt-5" data-toggle="modal" data-target="#subir">Subir producto</button>
+
+
+ 			<div class="row">
+ 				<div class="col">
+ 					
+		 			<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+									
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img2.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img3.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+ 				<div class="col">
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img4.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img5.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img6.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+ 				<div class="col">
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img7.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img8.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#cambiar" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../images/productos/img9.png" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+
+			<!--Modal de cambio de producto-->
+			<div class="modal fade" id="cambiar">
+				<div class="modal-dialog modal-dialog centered">
+					<div class="modal-content">
+
+						<div class="modal-header">
+							<h2>Cambiar producto</h2>
+						</div>
+					
+						<div class="modal-body">
+							
+							<form>
+
+								<div class="form-group mb-4">
+									<label for="pht">Escoga la foto de su producto</label>
+									<input type="file" class="form-control-file border" style="width: 400px;">
+	 								
+								</div>
+
+								<div class="form-group">
+			 						<input type="text" required class="form-control" id="prc" placeholder="$XXX.XXX"></input>
+
+			 					</div>
+
+			 					<div class="form-group">
+			 						<h5>Tallas disponibles</h5>
+			 						<label for="S">S</label>
+			 						<input type="radio" checked></input>
+
+			 						<label for="M">M</label>
+			 						<input type="radio"></input>
+
+			 						<label for="L">L</label>
+			 						<input type="radio"></input>
+
+			 						<label for="XL">XL</label>
+			 						<input type="radio"></input>
+			 					</div>
+
+			 					<div class="form-group">
+			 						<h5>Colores disponibles</h5>
+			 						<label for="A">Amarillo</label>
+			 						<input type="radio"></input>
+
+			 						<label for="AZ">Azul</label>
+			 						<input type="radio" checked></input>
+
+			 						<label for="R">Rojo</label>
+			 						<input type="radio"></input>
+
+			 						<label for="N">Negro</label>
+			 						<input type="radio"></input>
+
+			 						<label for="B">Blanco</label>
+			 						<input type="radio"></input>
+
+			 						<label for="Rs">Rosa</label>
+			 						<input type="radio"></input>
+
+			 						<label for="P">Purpura</label>
+			 						<input type="radio"></input>
+
+			 						<label for="V">Verde</label>
+			 						<input type="radio"></input>
+
+			 						<label for="O">Otro</label>
+			 						<input type="radio"></input>
+			 					</div>
+
+			 					<div class="form-group">
+			 						<label for="rol">Escoja una categoria</label>
+			 						<select class="form-control" id="categoria">
+			 							<option>Camisas</option>
+			 							<option>Camiseta</option>
+			 							<option>Polos</option>
+			 							<option>Chaquetas</option>
+			 							<option>Sacos</option>
+			 							<option>Esqueletos</option>
+			 							<option>Blusas</option>
+			 							<option>Jeans</option>
+			 							<option>Pantalones</option>
+			 							<option>Pantalonetas</option>
+			 							<option>Faldas</option>
+			 							<option>Leguis</option>
+			 							<option>Sudaderas</option>
+			 							<option>Tenis</option>
+			 							<option>Zapatillas</option>
+			 							<option>Sandalias</option>
+			 							<option>Botas</option>
+			 							<option>Gorros & Sombreros</option>
+			 							<option>Joyeria</option>
+			 							<option>Relojes</option>
+			 							<option>Interior para hombre</option>
+			 							<option>Interior para mujer</option>
+			 							<option>Interior para niño</option>
+			 							<option>Lenceria</option>
+			 							<option>Conjuntos</option>
+			 							<option>Disfraces</option>
+			 							<option>Vestidos</option>
+			 							<option>Trajes</option>
+			 							<option>Pijamas</option>
+			 							<option>Indumentaria deportiva</option>
+			 							<option>Trajes de baño</option>
+			 						</select>
+			 					</div>
+
+			 				</form>
+						
+						</div>
+						
+						<div class="modal-footer">
+							<div class="mx-auto">
+								<button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#alert-c">Cambiar</button>
+
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de subida de producto-->
+			<div class="modal fade" id="subir">
+				<div class="modal-dialog modal-dialog centered">
+					<div class="modal-content">
+
+						<div class="modal-header">
+							<h2>Subir producto</h2>
+						</div>
+					
+						<div class="modal-body">
+							
+							<form>
+
+								<div class="form-group mb-4">
+									<label for="pht">Escoga la foto de su producto</label>
+									<input type="file" class="form-control-file border" style="width: 400px;">
+	 								
+								</div>
+
+								<div class="form-group">
+			 						<label for="prc">Digite el precio del producto</label>
+			 						<input type="text" required class="form-control" id="prc"></input>
+
+			 					</div>
+
+			 					<div class="form-group">
+			 						<h5>Tallas disponibles</h5>
+			 						<label for="S">S</label>
+			 						<input type="radio"></input>
+
+			 						<label for="M">M</label>
+			 						<input type="radio"></input>
+
+			 						<label for="L">L</label>
+			 						<input type="radio"></input>
+
+			 						<label for="XL">XL</label>
+			 						<input type="radio"></input>
+			 					</div>
+
+			 					<div class="form-group">
+			 						<h5>Colores disponibles</h5>
+			 						<label for="A">Amarillo</label>
+			 						<input type="radio"></input>
+
+			 						<label for="AZ">Azul</label>
+			 						<input type="radio"></input>
+
+			 						<label for="R">Rojo</label>
+			 						<input type="radio"></input>
+
+			 						<label for="N">Negro</label>
+			 						<input type="radio"></input>
+
+			 						<label for="B">Blanco</label>
+			 						<input type="radio"></input>
+
+			 						<label for="Rs">Rosa</label>
+			 						<input type="radio"></input>
+
+			 						<label for="P">Purpura</label>
+			 						<input type="radio"></input>
+
+			 						<label for="V">Verde</label>
+			 						<input type="radio"></input>
+
+			 						<label for="O">Otro</label>
+			 						<input type="radio"></input>
+			 					</div>
+
+			 					<div class="form-group">
+			 						<label for="rol">Escoja una categoria</label>
+			 						<select class="form-control" id="categoria">
+			 							<option>Camisas</option>
+			 							<option>Camiseta</option>
+			 							<option>Polos</option>
+			 							<option>Chaquetas</option>
+			 							<option>Sacos</option>
+			 							<option>Esqueletos</option>
+			 							<option>Blusas</option>
+			 							<option>Jeans</option>
+			 							<option>Pantalones</option>
+			 							<option>Pantalonetas</option>
+			 							<option>Faldas</option>
+			 							<option>Leguis</option>
+			 							<option>Sudaderas</option>
+			 							<option>Tenis</option>
+			 							<option>Zapatillas</option>
+			 							<option>Sandalias</option>
+			 							<option>Botas</option>
+			 							<option>Gorros & Sombreros</option>
+			 							<option>Joyeria</option>
+			 							<option>Relojes</option>
+			 							<option>Interior para hombre</option>
+			 							<option>Interior para mujer</option>
+			 							<option>Interior para niño</option>
+			 							<option>Lenceria</option>
+			 							<option>Conjuntos</option>
+			 							<option>Disfraces</option>
+			 							<option>Vestidos</option>
+			 							<option>Trajes</option>
+			 							<option>Pijamas</option>
+			 							<option>Indumentaria deportiva</option>
+			 							<option>Trajes de baño</option>
+			 						</select>
+			 					</div>
+
+			 				</form>
+						
+						</div>
+						
+						<div class="modal-footer">
+							<div class="mx-auto">
+								<button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#alert-s">Subir</button>
+
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-success btn-lg">Guardar cambios</button>
+
+		</section>
+
+		<hr>
+
+		<footer>
+			<div class="row">
+	 		    <div class="col">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="footer/como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="footer/garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="footer/seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 					    		
+	 			
+	 	   	</div>
+		</footer>
+
+		<!--Modal alerta cambio-->
+		<div class="modal fade" id="alert-c">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="alert alert-success text-center">
+							El cambio se ha realizado con exito
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="alert-s">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="alert alert-success text-center">
+							Se subió el producto con exito
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</center>
+	</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat en vivo</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../bs413/bootstrap.min.css" />
+        <script src="../../bs413/jquery.min.js"></script>
+        <script src="../../bs413/popper.min.js"></script>
+        <script src="../../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../scripts/styles.css');
+	</style>
+
+	<body>
+	<center>
+		
+		<!--Barra de navegador-->
+		<nav class="navbar navbar-expand-sm bg-dark ">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../../index.html">Inicio</a>
+					<a class="dropdown-item" href="../ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="../categorias.html">Categorias</a>
+					<a class="dropdown-item" href="../menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="../informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Loguearse y Registrarse-->
+			<form class="form-inline ml-5" id="boton">
+				<a href="../../pages/login.html" class="btn btn-info mr-xl-2">Login</a>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#rol">Sign In</button>
+			</form>
+
+			<!--Logo-->
+			<a href="../../index.html" class="mx-auto">
+				<img src="../../images/logo.png" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+
+ 		</nav>
+
+ 		<section class="mb-5">
+ 			<h1 class="text-center" class="text-dark" style="font-family: Helvetica">En vivo</h1>
+			
+ 			<div class="media border p-3 text-left">
+  				<img src="../../images/foto1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  				<div class="media-body">
+    				<h4>Enrique Valencia &nbsp <small><i>Disponible</i></small></h4>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  				</div>
+			</div>
+
+			<div class="media border p-3 text-left">
+  				<img src="../../images/foto2.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  				<div class="media-body">
+    				<h4>Miguel Fuente &nbsp <small><i>Disponible</i></small></h4>
+    				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  				</div>
+			</div>
+		
+
+			<div class="media border p-3 text-left">
+  				<img src="../../images/foto1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  				<div class="media-body">
+    				<h4>Anderson &nbsp <small><i>No disponible</i></small></h4>
+    				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  				</div>
+			</div>
+
+ 		</section>
+
+ 		<footer>
+			<div class="row">
+	 		    <div class="col">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="../ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 	   	</div>
+
+		</footer>
+
+	</center>
+	</body>
+
+	<div class="modal fade" id="rol">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+				</div>
+
+				<div class="modal-footer">
+					<a href="../../pages/signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+					<a href="../../pages/signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</html>

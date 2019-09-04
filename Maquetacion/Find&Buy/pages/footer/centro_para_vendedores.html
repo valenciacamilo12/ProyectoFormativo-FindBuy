@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Centro para vendedores</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../bs413/bootstrap.min.css" />
+        <script src="../../bs413/jquery.min.js"></script>
+        <script src="../../bs413/popper.min.js"></script>
+        <script src="../../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../scripts/styles.css');
+	</style>
+
+	<body>
+	<center>
+		
+		<!--Barra de navegador-->
+		<nav class="navbar navbar-expand-sm bg-dark ">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../../index.html">Inicio</a>
+					<a class="dropdown-item" href="../ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="../categorias.html">Categorias</a>
+					<a class="dropdown-item" href="../menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="../informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Loguearse y Registrarse-->
+			<form class="form-inline ml-5" id="boton">
+				<a href="../../pages/login.html" class="btn btn-info mr-xl-2">Login</a>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#rol">Sign In</button>
+			</form>
+
+			<!--Logo-->
+			<a href="../../index.html" class="mx-auto">
+				<img src="../../images/logo.png" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+
+ 		</nav>
+
+ 		<section>
+ 			<h1 class="text-center" class="text-dark" style="font-family: Helvetica">Cómo puedes vender</h1>
+			<h5 class="text-center">Has click en una opción para leer más</h5>
+
+			<div class="list-group list-group-flush">	 			
+				<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda1">Entre mas productos subas, mas clientes tendras</button>
+
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda2">Comunicate con tus clientes</button>
+	 			
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda3">Productos claros y sencillos</button>
+	 		</div>
+ 		</section>
+
+ 		<footer>
+			<div class="row">
+	 		    <div class="col">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="../ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 	   	</div>
+
+		</footer>
+
+	</center>
+	</body>
+
+	<!--Modales-->
+	<div class="modal fade" id="moda1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Entre mas productos,mas clientes</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	Cuando subes un articulo de tu tienda, es publicado y todas las personas que estan visitando la plataforma lo pueden ver , que pasaria si tu publico recibe publicaciones diarias y actualizadas se sentiran que tu como vendedor te preocupas por subir tus productos, por consiguiente las personas se sentiran atraidas por tu gran cantidad de mercancia lo cual atraera mas clientes que querran comprar tus productos.
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Comunicate con tus clientes</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	Al comunicarte con tus clientes generas confiansa ,esto ayudara a que las personas entiendan que tu eres una persona agradable en la cual se puede confiar y por ello se sentiran mas seguros a la hora de comprar tus productos.
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda3">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Productos claros y sencillos</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	Cuando subes un producto es muy importante que  tengas en cuenta todos los aspectos ya sea la ilumacion a la hora de tomar la fotografia ,o la descripcion de la imagen, todo  influye a que tu perfil y tus productos sean claros y se puedan dar a entender de una manera concisa para que no haya espacio para ambiguedades y tu perfil sea mas agradable y entedible para las personas.
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="rol">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+				</div>
+
+				<div class="modal-footer">
+					<a href="../../pages/signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+					<a href="../../pages/signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</html>

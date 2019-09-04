@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Otros</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../bs413/bootstrap.min.css" />
+        <script src="../../bs413/jquery.min.js"></script>
+        <script src="../../bs413/popper.min.js"></script>
+        <script src="../../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../../scripts/styles.css');
+	</style>
+	<body>
+	<center>
+
+		<!--Barra de navegador-->
+		<nav class="navbar navbar-expand-sm bg-dark ">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../../index.html">Inicio</a>
+					<a class="dropdown-item" href="../ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="../categorias.html">Categorias</a>
+					<a class="dropdown-item" href="../menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="../informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Loguearse y Registrarse-->
+			<form class="form-inline ml-5" id="boton">
+				<a href="../login.html" class="btn btn-info mr-xl-2">Login</a>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#rol">Sign In</button>
+			</form>
+
+			<!--Logo-->
+			<a href="../../index.html" class="mx-auto">
+				<img src="../../images/logo.png" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+
+ 		</nav>
+
+ 		<header>
+ 			<h1>Categorias</h1>
+ 			<hr>
+ 			<div class="row">
+		 		    		<div class="col text-left">
+		 		    			<h5>Superior</h5>
+		 		    			<ul>
+		 		    				<li>
+		 		    					<a href="camisas.html">Camisas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="camisetas.html">Camisetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="polos.html">Polos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="chaquetas.html">Chaquetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="sacos.html">Sacos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="esqueletos.html">Esqueletos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="blusas.html">Blusas</a>
+		 		    				</li>
+		 		    			</ul> 					    			
+		 		    		</div>
+
+		 		    		<div class="col text-left">
+		 		    			<h5>Inferior</h5>
+		 		    			<ul>
+		 		    				<li>
+		 		    					<a href="jeans.html">Jeans</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pantalones.html">Pantalones</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pantalonetas.html">Pantalonetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="faldas.html">Faldas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 			   					<a href="leguis.html">Leguis</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="sudaderas.html">Sudaderas</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col text-left">
+		 			   			<h5>Calzado</h5>
+		 			   			<ul>
+		 			   				<li>
+		 			   					<a href="tenis.html">Tenis</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="zapatillas.html">Zapatillas</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="sandalias.html">Sandalias</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="botas.html">Botas</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col text-left">
+		 			   			<h5>Accesorios</h5>
+		 			   			<ul>
+		 			  				<li>
+		 			   					<a href="gorros.html">Gorros & Sombreros</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="joyeria.html">Joyeria</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="relojes.html">Relojes</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="otros.html">Otros</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col text-left">
+		 			   			<h5>Interior</h5>
+		 			   			<ul>
+		 			   				<li>
+		 			   					<a href="hombre.html">Hombre</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="mujer.html">Mujer</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="niños.html">Niños</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="lenceria.html">Lenceria</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+		 					    		
+		 					<div class="col text-left">
+		 						<h5>Conjuntos</h5>
+		 		    			<ul>
+		 			   				<li>
+		 		    					<a href="conjuntos.html">Conjuntos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="disfraces.html">Disfraces</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="vestidos.html">Vestidos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="trajes.html">Trajes</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pijamas.html">Pijamas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="deportes.html">Indumentaria deportiva</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="swimsuit.html">Trajes de baño</a>
+		 		    				</li>
+		 		    			</ul>
+		 		    		</div>
+		 		    	</div>
+ 		</header>
+
+ 		<hr>
+
+ 		<section>
+ 			<h1>Otros</h1>
+ 			<hr>
+ 			<div class="row">
+ 				<div class="col">
+		 			<button type="button" data-toggle="modal" data-target="#img1" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+									
+					<button type="button" data-toggle="modal" data-target="#img2" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img2.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#img3" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img3.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+ 				<div class="col">
+					<button type="button" data-toggle="modal" data-target="#img4" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img4.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#img5" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img5.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#img6" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img6.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+ 				<div class="col">
+					<button type="button" data-toggle="modal" data-target="#img7" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img7.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#img8" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img8.jpg" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+
+					<button type="button" data-toggle="modal" data-target="#img9" class="m-5">
+		 				<h5>Nombre Tienda</h5>
+						<img src="../../images/productos/img9.png" width="250px" height="250px" class="img-thumbnail">		
+					</button>
+				</div>
+			</div>
+				
+			<!--Modal de la imagen 1-->
+			<div class="modal fade" id="img1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 2-->
+			<div class="modal fade" id="img2">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img2.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 3-->
+			<div class="modal fade" id="img3">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img3.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 4-->
+			<div class="modal fade" id="img4">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img4.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 5-->
+			<div class="modal fade" id="img5">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img5.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 6-->
+			<div class="modal fade" id="img6">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img6.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 7-->
+			<div class="modal fade" id="img7">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img7.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 8-->
+			<div class="modal fade" id="img8">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img8.jpg" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de la imagen 9-->
+			<div class="modal fade" id="img9">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+						 	<div class="mx-auto">
+								<img src="../../images/productos/img9.png" width="250px">
+							</div>						 									
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col">
+									<h7>Tienda</h7>
+									<div class="border border-dark" style="width:200px">La tienda de don chucho</div>
+									<h7>Precio</h7>
+									<div class="border border-dark" style="width:200px">$500.000</div>
+								</div>
+								<div class="col">
+									<form>
+										<label class="mt-3">Tallas</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</form>
+									<form>
+										<label class="mt-3">Colores</label>
+										<select name="cars" class="custom-select" style="width: 100px">
+											<option selected>Amarillo</option>
+											<option value="Rojo">Rojo</option>
+											<option value="Azul">Azul</option>
+											<option value="Negro">Negro</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="mt-3">
+								<h6>Location</h6>
+								<img src="../../images/ubicaciones/img1.png" width="200px">
+							</div>						
+						</div>
+
+						<div class="modal-footer bg-light">
+							<form class="form-inline mx-auto">
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#comprar">Comprar</button>
+										
+								<button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#reserva">Reservar</button>
+
+								<a href="../vista-tienda.html" class="btn btn-dark">Visitar tienda</a>
+							</form>								
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+			<!--Modal de Reserva-->
+			<div class="modal fade" id="reserva">
+				<div class="modal-dialog modal-dialog centered">
+					<div class="modal-content">
+					
+						<div class="modal-body">
+							<form class="form-inline">
+								<div class="bg-secondary">Fecha de entrega</div>
+								<input type="date" name="bday">
+							</form>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-success mx-auto" data-dismiss="modal">Reservar</button>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+			<!--Modal de Compra-->
+			<div class="modal fade" id="comprar">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body">
+							
+							<div class="row">
+								<div class="col">
+									<div class="form-inline">
+										<div class="bg-secondary mr-2">Dirección</div>
+											<input type="text" name="address" placeholder="Dirección de envio">
+										</div>
+										<div class="form-inline mt-2">
+											<div class="bg-secondary mr-2">Contacto</div>
+											<input type="text" name="contacto" placeholder="Número telefónico">
+										</div>
+										<div class="form-inline mt-2">
+											<div class="bg-secondary mr-2">Fecha de entrega de la compra</div>
+												<div class="border border-secondary">31/02/19 25:00</div>
+											</div>
+										</div>
+									</div>
+														
+									<hr>
+									<h4>Pagos</h4>
+									<hr>
+														
+									<div class="row">
+										<div class="col">
+											<div class="form-inline">
+												<label class="mt-3 mr-3">Forma de Pago</label>
+												<select name="pagos" class="custom-select" style="width: 100px">
+													<option selected>Efectivo</option>
+													<option value="Apostar">Apostar</option>
+													<option value="Efecty">Efecty</option>
+													<option value="Baloto">Baloto</option>
+												</select>
+											</div>
+																
+											<div class="form-inline mt-3">
+												<div class="bg-secondary">Tarjeta</div>
+												<input type="text" name="tarjeta" placeholder="Digite el número de su tarjeta" class="rounded"></input>
+											</div>
+										</div>
+									</div> 
+								</div>
+
+								<div class="modal-footer">
+									<div class="form-inline mx-auto">														
+										<button type="submit" class="btn btn-success mr-3" data-dismiss="modal">Comprar</button>
+												
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<footer>
+			<div class="row">
+	 		    <div class="col">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="../footer/como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="../footer/garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="../ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="../footer/seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="../footer/noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 					    		
+	 			
+	 	   	</div>
+		</footer>
+
+		<!--Modal para escoger un rol-->
+		<div class="modal fade" id="rol">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+					</div>
+
+					<div class="modal-footer">
+						<a href="../signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+						<a href="../signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+	</center>
+	</body>
+</html>

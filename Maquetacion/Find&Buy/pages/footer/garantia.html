@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Garantia</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../bs413/bootstrap.min.css" />
+        <script src="../../bs413/jquery.min.js"></script>
+        <script src="../../bs413/popper.min.js"></script>
+        <script src="../../bs413/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../scripts/style.css"/>		
+	</head>
+
+	<style>
+		@import url('../scripts/styles.css');
+	</style>
+
+	<body>
+	<center>
+		
+		<!--Barra de navegador-->
+		<nav class="navbar navbar-expand-sm bg-dark ">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../../index.html">Inicio</a>
+					<a class="dropdown-item" href="../ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="../categorias.html">Categorias</a>
+					<a class="dropdown-item" href="../menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="../informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Loguearse y Registrarse-->
+			<form class="form-inline ml-5" id="boton">
+				<a href="../../pages/login.html" class="btn btn-info mr-xl-2">Login</a>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#rol">Sign In</button>
+			</form>
+
+			<!--Logo-->
+			<a href="../../index.html" class="mx-auto">
+				<img src="../../images/logo.png" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+
+ 		</nav>
+
+ 		<section>
+ 			<h1 class="text-center" class="text-dark" style="font-family: Helvetica">Garantia Find&Buy</h1>
+ 			 <h5 class="text-center">Queremos que compres en Find&Buy <br/>todo lo que quieras con la mayor tranqulidad por eso, <br/>nos aseguraremos de que <br/>recuperes tu dinero en caso de no recibir lo que querias.</h5>
+			<h5 class="text-center">Has click en una opción</h5>
+
+			<div class="list-group list-group-flush">	 			
+				<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda1">Comunicate con el vendedor</button>
+
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda2">Si el vendedor no te responde en 8 dias, puedes pedirnos ayuda</button>
+	 			
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda3">Te contactaremos en el caso pertinente y haremos el debido proceso</button>
+	 			
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda4">Te enviarmeos un correo con toda la informacion correspondiente a tu caso</button>
+	 			
+	 			<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#moda5">Con la informacion que te demos sera mas facil hacer un reembolso o una devolucion</button>
+	 		
+	 		</div>
+ 		</section>
+
+ 		<footer>
+			<div class="row">
+	 		    <div class="col">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="../ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 	   	</div>
+
+		</footer>
+
+	</center>
+	</body>
+
+	<!--Modales-->
+	<div class="modal fade" id="moda1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Como comunicarme con el vendedor</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	Para comunicarte con el vendedor debes entrar al perfil del vendedor y dar click en el apartado de telefono , y asi de simple te puedes comunicar con el vendedor
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Necesitas ayuda?</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	En el apartado de preguntas frecuentes puedes introducir tu pregunta y el caso en particular, por lo general respondemos en las primeras 12 horas de enviado el mensaje.
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda3">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Contacto</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	En caso de que los pasos anteriores no te hallan funcionado te contactaremos y hablaremos sobre el caso en particular
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda4">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+                <h4 class="modal-title">Correo electronio</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	El correo electronico tendra toda la informacion necesaria para que puedas hacer la devolucion del articulo
+                y asi reembolsar tu dinero
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="moda5">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <h4 class="modal-title">Más facil, menos problemas</h4>
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	            </div>
+	        
+	            <!-- Modal body -->
+	            <div class="modal-body">
+	              	Asi que tranquilo Find&Buy soluciona tu problema rapido y eficiente
+	            </div>
+	        
+	            <!-- Modal footer -->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cerrar</button>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="rol">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+				</div>
+
+				<div class="modal-footer">
+					<a href="../../pages/signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+					<a href="../../pages/signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</html>
