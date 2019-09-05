@@ -9,7 +9,7 @@
 		{% include "base/javascript.html" %}
 	</head>
 
-	<body id="log">
+	<body id="log" style="background: url({% static 'img/img1.jfif' %});background-size: 100%;">
 	<center>
 	
 		<nav class="navbar navbar-expand-sm bg-dark">
@@ -26,9 +26,9 @@
 			</div>
 
 			<!--Logo-->
-			<a href="../index.html" class="mx-auto">
+			<!--<a href="../index.html" class="mx-auto">
 				<img src="{% static 'img/logo.png' %}" width="100" height="50">
-			</a>
+			</a>-->
 
 			<!--Buscador-->
 			<form class="form-inline ml-auto" action="/action_page.php">
@@ -81,76 +81,6 @@
 		 		</div>
 		 	</div>
 		</section>
-
-	 	<footer class="bg-light">
-			<div class="row">
-	 		    <div class="col mt-5">
-	 				<h5>Cómo comprar</h5>
-	 				<ul class="list-group list-group-flush">
-	 					<li class="list-group-item">
-	 						<a href="footer/como_comprar.html" class="list-group-item-action">Cómo comprar</a>
-	 					</li>
-
-	 					<li class="list-group-item">
-	 						<a href="footer/garantia.html" class="list-group-item-action">Garantia al cliente</a>
-	 					</li>
-
-	 					<li class="list-group-item">
-	 						<a href="ofertas.html" class="list-group-item-action">Ofertas</a>
-	 					</li>
-	 				</ul>
-	 			</div>
-
-	 			<div class="col mt-5">
-	 	   			<h5>Cómo vender</h5>
-	 	   			<ul class="list-group list-group-flush">
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/como_vender.html" class="list-group-item-action">Cómo vender</a>
-	 	   				</li>
-
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
-	 	   				</li>
-	 	   			</ul>
-	 	   		</div>
-
-	 	   		<div class="col mt-5">
-	 	   			<h5>Ayuda</h5>
-	 	   			<ul class="list-group list-group-flush">
-	 	  				<li class="list-group-item">
-	 	   					<a href="footer/seguridad.html" class="list-group-item-action">Seguridad</a>
-	 	   				</li>
-
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
-	 	   				</li>
-
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/chat.html" class="list-group-item-action">Chat en vivo</a>
-	 	   				</li>
-	 	   			</ul>
-	 	   		</div>
-
-	 	   		<div class="col mt-5">
-	 	   			<h5>Comunidad</h5>
-	 	   			<ul class="list-group list-group-flush">
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
-	 	   				</li>
-
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/debate.html" class="list-group-item-action">Foro de debate</a>
-	 	   				</li>
-
-	 	   				<li class="list-group-item">
-	 	   					<a href="footer/noticias.html" class="list-group-item-action">Noticias</a>
-	 	   				</li>
-	 	   			</ul>
-	 	   		</div>
-	 					    		
-	 			
-	 	   	</div>
-		</footer>
 
 		<!--Modal para escoger un rol-->
 		<div class="modal fade" id="role">

@@ -10,8 +10,6 @@ header {
 #log {
 	width: 100%;
 	height: 600px;
-	background: url(../images/img1.jpg);
-	background-size: 100%;
 }
 
 .container-fluid {
