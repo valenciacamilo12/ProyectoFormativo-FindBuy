@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+	<head>
+		<title>Loguearse</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% include "base/head_css.html" %}
+		{% include "base/javascript.html" %}
+	</head>
+
+	<body id="log">
+	<center>
+	
+		<nav class="navbar navbar-expand-sm bg-dark">
+
+			<div class="dropdown mr-5">
+				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="../index.html">Inicio</a>
+					<a class="dropdown-item" href="ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="categorias.html">Categorias</a>
+					<a class="dropdown-item" href="menos40.html">Por menos de 40.000</a>
+					<a class="dropdown-item" href="informacion.html">Información</a>
+				</div>
+			</div>
+
+			<!--Logo-->
+			<a href="../index.html" class="mx-auto">
+				<img src="{% static 'img/logo.png' %}" width="100" height="50">
+			</a>
+
+			<!--Buscador-->
+			<form class="form-inline ml-auto" action="/action_page.php">
+				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
+				<button class="btn btn-success" type="submit">Buscar</button>
+			</form>
+			
+ 		</nav>
+
+		<section class="mb-5">
+			<div class="mt-5 align-middle card"style="width:400px;">
+	 			<div class="card-header">
+	 				<h4 class="card-title">Login</h4>
+	 			</div>
+
+	 			<div class="card-body">
+	 				<form method="post">{% csrf_token %}
+	 					
+	 					<div class="form-group">
+	 						<label for="rol">Rol:</label>
+	 						<select class="form-control" id="rol">
+	 							<option>Cliente</option>
+	 							<option>Tienda</option>
+	 						</select>
+	 					</div>
+
+	 					<div class="form-group">
+	 						<label for="username">Nombre de Usuario</label>
+	  						<input class="form-control" type="text" name="username">
+	 					</div>
+
+	 					<div class="form-group">
+	 						<label for="username">Contraseña</label>
+							<input class="form-control" type="password" name="password">
+						</div>
+
+	 					<div class="form-group">
+	 						<a href="recuperacion.html">¿Olvidó su contraseña?</a>
+	 					</div>
+
+	 					<div class="form-group">
+	 						<button type="button" class="btn btn-info" data-toggle="modal" data-target="#role">¿Aun no estás registrado?</button>
+	 					</div>
+
+	 					<a>
+	 						<button class="btn btn-success" type="submit" value="">Loguearse</button>
+	 					</a>
+
+	 				</form>
+		 		</div>
+		 	</div>
+		</section>
+
+	 	<footer class="bg-light">
+			<div class="row">
+	 		    <div class="col mt-5">
+	 				<h5>Cómo comprar</h5>
+	 				<ul class="list-group list-group-flush">
+	 					<li class="list-group-item">
+	 						<a href="footer/como_comprar.html" class="list-group-item-action">Cómo comprar</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="footer/garantia.html" class="list-group-item-action">Garantia al cliente</a>
+	 					</li>
+
+	 					<li class="list-group-item">
+	 						<a href="ofertas.html" class="list-group-item-action">Ofertas</a>
+	 					</li>
+	 				</ul>
+	 			</div>
+
+	 			<div class="col mt-5">
+	 	   			<h5>Cómo vender</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/como_vender.html" class="list-group-item-action">Cómo vender</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/centro_para_vendedores.html" class="list-group-item-action">Centro para vendedores</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col mt-5">
+	 	   			<h5>Ayuda</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	  				<li class="list-group-item">
+	 	   					<a href="footer/seguridad.html" class="list-group-item-action">Seguridad</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/preguntas_frecuentes.html" class="list-group-item-action">Preguntas frecuentes</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/chat.html" class="list-group-item-action">Chat en vivo</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+
+	 	   		<div class="col mt-5">
+	 	   			<h5>Comunidad</h5>
+	 	   			<ul class="list-group list-group-flush">
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/foro_respuestas.html" class="list-group-item-action">Foro de respuestas</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/debate.html" class="list-group-item-action">Foro de debate</a>
+	 	   				</li>
+
+	 	   				<li class="list-group-item">
+	 	   					<a href="footer/noticias.html" class="list-group-item-action">Noticias</a>
+	 	   				</li>
+	 	   			</ul>
+	 	   		</div>
+	 					    		
+	 			
+	 	   	</div>
+		</footer>
+
+		<!--Modal para escoger un rol-->
+		<div class="modal fade" id="role">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+					</div>
+
+					<div class="modal-footer">
+						<a href="signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+						<a href="signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</center>
+	</body>
+</html>

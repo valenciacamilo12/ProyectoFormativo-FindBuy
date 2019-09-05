@@ -30,9 +30,10 @@ class DeleteProducto(DeleteView):
     success_url = reverse_lazy('productos:producto_listar')
 
 
-class ListProduct(ListView):
+# esto es un codigo de prueba
+class ListProducto(ListView):
     model = Producto
-    template_name = 'productos/productos_list.html'
+    template_name = 'base/base.html'
 
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from apps.clientes.models import User
-from apps.clientes.forms import  FormCliente
+from apps.clientes.forms import FormCliente
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 from django.urls import reverse_lazy
 

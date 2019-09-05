@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -54,6 +56,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Proyectofindbuy.urls'
 AUTH_USER_MODEL = 'clientes.User'
+LOGIN_REDIRECT_URL = reverse_lazy('productos:producto_listar')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
