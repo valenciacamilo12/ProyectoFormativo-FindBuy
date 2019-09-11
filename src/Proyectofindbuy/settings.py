@@ -55,7 +55,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Proyectofindbuy.urls'
-AUTH_USER_MODEL = 'clientes.User'
 LOGIN_REDIRECT_URL = reverse_lazy('productos:producto_listar')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

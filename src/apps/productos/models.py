@@ -6,6 +6,9 @@ class Categoria(models.Model):
     id_categoria = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=40)
 
+    def __str__(self):
+        return '{}'.format(self.nombre)
+
 class Producto(models.Model):
     id_producto = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=40)
@@ -17,6 +20,8 @@ class Producto(models.Model):
     tienda = models.ForeignKey(Tienda, models.CASCADE, null=True, blank=True)
     categoria = models.ForeignKey(Categoria, models.CASCADE, null=True, blank=True)
 
+    def __str__(self):
+        return '{}'.format(self.nombre)
 
 class Venta(models.Model):
     id_venta = models.AutoField(primary_key=True)
@@ -24,6 +29,9 @@ class Venta(models.Model):
     fecha = models.CharField(max_length=40)
     total = models.CharField(max_length=40)
     cliente = models.ForeignKey(User, models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return '{}'.format(self.id_venta)
 
 
 class VentaProducto(models.Model):
@@ -34,3 +42,5 @@ class VentaProducto(models.Model):
     producto = models.ForeignKey(Producto, models.CASCADE, blank=True, null=True)
     venta = models.ForeignKey(Venta, models.CASCADE, blank=True, null=True)
 
+    def __str__(self):
+        return '{}'.format(self.id_ventaproducto)

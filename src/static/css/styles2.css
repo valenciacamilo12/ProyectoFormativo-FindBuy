@@ -1,0 +1,124 @@
+{% load staticfiles %}
+@font-face {
+    font-family:"Roboto Th";
+    src: url({% static 'fonts/Roboto-Thin.ttf' %})
+}
+
+@font-face {
+	font-family:"Nexa Light";
+    src: url({% static 'fonts/Roboto-Thin.ttf' %})
+}
+
+body {
+	background-color: #f0eeee; 
+}
+
+section {
+	width: 1100px;
+	height: 500px;
+	position: relative;
+	background-color: white;
+	margin-top: 50px;
+}
+
+#photo {
+	width: 55%;
+	height: 500px;
+	border: solid 1px #dedddd;
+	position: relative;
+	float: left;
+	
+}
+
+#description {
+	width: 45%;
+	height: 500px;
+	border: solid 1px #dedddd;
+	position: relative;
+	float: left;
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+
+.rating {
+	position: absolute;
+	/*top: 50%;
+	left: 50%;*/
+	transform: rotateY(180deg);
+	display: flex;
+	margin-left: 38px;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	display: block;
+	cursor: pointer;
+	width: 30px;
+}
+
+.rating label:before {
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #101010;
+}
+
+.rating label:after {
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #ffd423;
+	top: 0;
+	opacity: 0;
+	transition: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after, .rating label:hover ~ label:after, .rating input:checked ~ label:after {
+	opacity: 1;
+}
+
+.price {
+	font-family: "Nexa Light";
+	font-size: 60px;
+	float: left;
+}
+
+.discount {
+	float: left;
+	font-family: "Nexa Light";
+	color: #00a650;
+}
+
+.description-footer {
+	margin: 0;
+	position: absolute;
+	top: 110%;
+	left: 40%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.sizes {
+	margin: 0;
+	position: absolute;
+	top: 65%
+}
+
+.colors {
+	margin: 0;
+	position: absolute;
+	top: 85%
+}
+
+.list-group-item {
+	background-color: #f0eeee;
+}
