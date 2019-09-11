@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <br>
+    <div class="container">
+        {% if object_list %}
+            <h3 class="text-center">Tiendas Registradas</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Telefono</th>
+                    </tr>
+                </thead>
+            {% for tienda in object_list %}
+                <tbody>
+                    <tr class="table-light">
+                        <td>{{ tienda.nombre }}</td>
+                        <td>{{ tienda.direccion }}</td>
+                        <td>{{ tienda.telefono }}</td>
+                        <td>
+                            <a href="{% url 'tienda:tienda_editar' tienda.id_tienda %}" class="btn btn-success">Editar</a>
+                            <a href="{% url 'tienda:tienda_eliminar' tienda.id_tienda %}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+            </table>
+        {% else %}
+        <div class="container">
+            <h3>No Hay ninguna tienda registrada =<</h3>
+        </div>
+        <br>
+        {% endif %}
+    </div>
+
+
+
+{% endblock content %}

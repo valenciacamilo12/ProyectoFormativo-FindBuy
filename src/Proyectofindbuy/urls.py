@@ -23,6 +23,7 @@ from django.contrib.auth.views import login, password_reset, password_reset_done
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^productos/', include('apps.productos.urls', namespace='productos')),
+    url(r'^tiendas/', include('apps.tienda.urls', namespace='tienda')),
     url(r'^$', login, {'template_name': 'login.html'}, name='login'),
     url(r'^accounts/login/', login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/', logout_then_login, name='logout'),

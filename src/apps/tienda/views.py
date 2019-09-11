@@ -7,14 +7,14 @@ from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 class CreateTienda(CreateView):
     model = Tienda
     form_class = FormTienda
-    template_name = 'tienda/tienda_create.html'
+    template_name = 'tienda/tienda_form.html'
     success_url = reverse_lazy('tienda:tienda_listar')
 
 
 class UpdateTienda(UpdateView):
     model = Tienda
     form_class = FormTienda
-    template_name = 'tienda/tienda_create.html'
+    template_name = 'tienda/tienda_form.html'
     success_url = reverse_lazy('tienda:tienda_listar')
 
 

@@ -110,24 +110,24 @@ class ListVenta(ListView):
 class CreateProductoVenta(CreateView):
     model = VentaProducto
     form_class = VentaProductoForm
-    template_name = 'productos/ventaproducto_form.html'
+    template_name = 'productos/tienda_form.html'
     success_url = reverse_lazy('productos:ventaproducto_listar')
 
 
 class DeleteProductoVenta(DeleteView):
     model = VentaProducto
     form_class = VentaProductoForm
-    template_name = 'productos/ventaproducto_delete.html'
+    template_name = 'productos/tienda_delete.html'
     success_url = reverse_lazy('productos:ventaproducto_listar')
 
 
 class UpdateProductoVenta(UpdateView):
     model = VentaProducto
     form_class = VentaProductoForm
-    template_name = 'productos/ventaproducto_form.html'
+    template_name = 'productos/tienda_form.html'
     success_url = reverse_lazy('productos:ventaproducto_listar')
 
 class ListProductoVenta(ListView):
     model = VentaProducto
-    template_name = 'productos/ventaproducto_list.html'
+    template_name = 'productos/tienda_list.html'
 

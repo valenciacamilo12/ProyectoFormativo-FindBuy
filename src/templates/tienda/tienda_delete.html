@@ -1,0 +1,8 @@
+{% extends "base/base.html"%}
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <h3>Desea eliminar la tienda {{object.nombre}}</h3>
+        <button type ="submit" class="btn btn-danger">Si, eliminar </button>
+        <a class="btn btn-success" href="{% url 'tienda:tienda_listar' %}">Cancelar</a>
+    </form>
+{% endblock content %}
