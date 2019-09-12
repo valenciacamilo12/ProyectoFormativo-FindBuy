@@ -12,15 +12,14 @@
 	</head>
 	<body>
 	<center>
-
-		<!--Barra de navegador-->
+	<!--Barra de navegador-->
 		<div class="navbar navbar-expand-sm bg-dark ">
 
 			<div class="dropdown mr-5">
 				<button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Menu</button>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#">Inicio</a>
-					<a class="dropdown-item" href="pages/ofertas.html">Ofertas</a>
+					<a class="dropdown-item" href="{% url 'productos:producto_ofertas' %}">Ofertas</a>
 					<a class="dropdown-item" href="pages/categorias.html">Categorias</a>
 					<a class="dropdown-item" href="pages/menos40.html">Por menos de 40.000</a>
 					<a class="dropdown-item" href="pages/informacion.html">Información</a>
@@ -43,6 +42,87 @@
 			</form>
 
  		</div>
+		<header id="demo" class="carousel slide" data-ride="carousel">
+
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<a href="{% url 'productos:producto_ofertas' %}">
+							<img src="{% static 'img/slider6.jpg'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption text-body">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<a href="pages/ofertas.html">
+							<img src="{% static 'img/slider5.jpg'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption text-body">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<a href="pages/ofertas.html">
+							<img src="{% static 'img/slider4.jpg'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<a href="pages/ofertas.html">
+							<img src="{% static 'img/slider1.jpg'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption text-body">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<a href="pages/ofertas.html">
+							<img src="{% static 'img/slider2.png'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<a href="pages/ofertas.html">
+							<img src="{% static 'img/slider3.gif'%}" width="100%" height="500px">
+						</a>
+						<div class="carousel-caption text-body">
+							<h4>Un click para ir a las ofertas</h4>
+						</div>
+					</div>
+
+					<!--Next/Previous Buttons-->
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon" style="height: 150px; background-color: gray;"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon" style="height: 150px; background-color: gray;"></span>
+					</a>
+
+				</div>
+		</header>
+
+		<nav class="navbar navbar-expand-sm bg-dark mb-5">
+			<form class="form-inline mx-auto">
+				<a href="#" class="btn btn-outline-light btn-lg mr-5">Inicio</a>
+				<a href="{% url 'productos:producto_ofertas' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Ofertas</a>
+				<button type="button" class="btn btn-outline-light btn-lg ml-5 mr-5" data-toggle="modal" data-target="#categoria">Categorias</button>
+
+				<a href="{% url 'productos:producto_menos40' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Por menos de 40.000</a>
+				<a href="pages/informacion.html" class="btn btn-outline-light btn-lg ml-5">Información</a>
+			</form>
+		</nav>
+
+
 
  		<!--Slider-->
  		{% block content %}

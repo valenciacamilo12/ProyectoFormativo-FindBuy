@@ -1,17 +1,19 @@
 from django.conf.urls import url
-from apps.productos.views import index, Producto, ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto
+from apps.productos.views import Producto, ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, OfertaProducto, Menos40Producto
 from apps.productos.views import ListCategoria, CreateCategoria, UpdateCategoria, DeleteCategoria
 from apps.productos.views import ListProductoVenta, CreateProductoVenta, UpdateProductoVenta, DeleteProductoVenta
 from apps.productos.views import ListVenta, CreateVenta, UpdateVenta, DeleteVenta
 
 urlpatterns = [
     #Productos
-    url(r'^productos$', Producto.as_view(), name='productos'),
+    url(r'^$', Producto.as_view()),
     url(r'^producto/listar$', ListProducto.as_view(), name='producto_listar'),
     url(r'^producto/crear$', CreateProducto.as_view(), name='producto_crear'),
     url(r'^producto/editar/(?P<pk>[\d]+)/$', UpdateProducto.as_view(), name='producto_editar'),
     url(r'^producto/eliminar/(?P<pk>[\d]+)/$', DeleteProducto.as_view(), name='producto_eliminar'),
     url(r'^detalle/(?P<pk>\d+)$', DetailViewProducto.as_view(), name='producto_detalle'),
+    url(r'^ofertas$', OfertaProducto.as_view(), name='producto_ofertas'),
+    url(r'^menos40$', Menos40Producto.as_view(), name='producto_menos40'),
 
     #Categorias
     url(r'^categorias/listar$', ListCategoria.as_view(), name='categoria_listar'),

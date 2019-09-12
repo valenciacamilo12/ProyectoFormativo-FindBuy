@@ -4,10 +4,6 @@ from apps.productos.forms import ProductoForm, CategoriaForm, VentaForm, VentaPr
 from django.urls import reverse_lazy
 from apps.productos.models import Producto, Categoria, Venta, VentaProducto
 
-def index(request):
-    return render(request, 'base/base.html')
-
-
 class CreateProducto(CreateView):
     model = Producto
     form_class = ProductoForm
@@ -26,6 +22,15 @@ class UpdateProducto(UpdateView):
     success_url = reverse_lazy('productos:producto_listar')
 
 
+class OfertaProducto(ListView):
+    model = Producto
+    template_name = 'productos/ofertas.html'
+
+
+class Menos40Producto(ListView):
+    model = Producto
+    template_name = 'productos/menos40.html'
+
 
 class DeleteProducto(DeleteView):
     model = Producto
@@ -34,10 +39,10 @@ class DeleteProducto(DeleteView):
     success_url = reverse_lazy('productos:producto_listar')
 
 
-# esto es un codigo de prueba
 class ListProducto(ListView):
     model = Producto
     template_name = 'productos/productos_list.html'
+
 
 class Producto(ListView):
     model = Producto
@@ -46,7 +51,7 @@ class Producto(ListView):
 
 
 
-#--------------------Categorias---------------------------------------
+#--------------------Categorias-------------------------------
 
 
 class ListCategoria(ListView):
