@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from apps.productos.views import Producto, ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, OfertaProducto, Menos40Producto
+from apps.productos.views import Producto, ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, OfertaProducto, Menos40Producto, Informacion
 from apps.productos.views import ListCategoria, CreateCategoria, UpdateCategoria, DeleteCategoria
 from apps.productos.views import ListProductoVenta, CreateProductoVenta, UpdateProductoVenta, DeleteProductoVenta
 from apps.productos.views import ListVenta, CreateVenta, UpdateVenta, DeleteVenta
@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^detalle/(?P<pk>\d+)$', DetailViewProducto.as_view(), name='producto_detalle'),
     url(r'^ofertas$', OfertaProducto.as_view(), name='producto_ofertas'),
     url(r'^menos40$', Menos40Producto.as_view(), name='producto_menos40'),
+    url(r'^informacion$', Informacion.as_view(), name='informacion'),
 
     #Categorias
     url(r'^categorias/listar$', ListCategoria.as_view(), name='categoria_listar'),

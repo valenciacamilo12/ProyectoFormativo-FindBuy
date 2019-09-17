@@ -31,6 +31,11 @@ class Menos40Producto(ListView):
     model = Producto
     template_name = 'productos/menos40.html'
 
+# Esto es una Prueba
+class Informacion(ListView):
+    model = Producto
+    template_name = 'productos/informacion.html'
+
 
 class DeleteProducto(DeleteView):
     model = Producto

@@ -26,6 +26,13 @@ SECRET_KEY = 'z&$xtp(@cqbzq^w2lsli_=lhzb62j5cv8knl-(6(8@3t3hvgrn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'oscarpruebadjango@gmail.com'
+EMAIL_HOST_PASSWORD = 'pr0b@rdj@ng0'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 ALLOWED_HOSTS = []
 
@@ -55,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Proyectofindbuy.urls'
-LOGIN_REDIRECT_URL = reverse_lazy('productos:producto_listar')
+LOGIN_REDIRECT_URL = reverse_lazy('productos:productos')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
