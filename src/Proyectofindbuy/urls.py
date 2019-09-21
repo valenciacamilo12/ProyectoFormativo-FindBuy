@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from apps.productos.views import Producto
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete, logout_then_login
@@ -24,12 +25,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^productos/', include('apps.productos.urls', namespace='productos')),
     url(r'^tiendas/', include('apps.tienda.urls', namespace='tienda')),
-    url(r'^$', login, {'template_name': 'login.html'}, name='login'),
+    url(r'^$', Producto.as_view()),
     url(r'^accounts/login/', login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/', logout_then_login, name='logout'),
     url(r'reset/password_reset', password_reset,
         {'template_name':'registration/password_reset_form.html',
-         'email_template_name':'registration/password_reset_email.html'},
+         'email_template_name': 'registration/password_reset_email.html'},
         name='password_reset'),
     url(r'reset_password_done', password_reset_done,
         {'template_name':'registration/password_reset_done.html'},

@@ -2,58 +2,68 @@ from django.shortcuts import render
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
 from apps.productos.forms import ProductoForm, CategoriaForm, VentaForm, VentaProductoForm
 from django.urls import reverse_lazy
-from apps.productos.models import Producto, Categoria, Venta, VentaProducto
+from apps.productos.models import Producto as ProductoModel, Categoria, Venta, VentaProducto
+from django.http import HttpResponseRedirect
 
 class CreateProducto(CreateView):
-    model = Producto
+    model = ProductoModel
     form_class = ProductoForm
     template_name = 'productos/producto_form.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
 class DetailViewProducto(DetailView):
-    model = Producto
+    model = ProductoModel
     template_name = 'productos/producto_detail.html'
 
 class UpdateProducto(UpdateView):
-    model = Producto
+    model = ProductoModel
     form_class = ProductoForm
     template_name = 'productos/producto_form.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
 class OfertaProducto(ListView):
-    model = Producto
+    model = ProductoModel
     template_name = 'productos/ofertas.html'
 
 
-class Menos40Producto(ListView):
-    model = Producto
-    template_name = 'productos/menos40.html'
+
 
 # Esto es una Prueba
 class Informacion(ListView):
-    model = Producto
+    model = ProductoModel
     template_name = 'productos/informacion.html'
 
 
 class DeleteProducto(DeleteView):
-    model = Producto
+    model = ProductoModel
     form_class = ProductoForm
     template_name = 'productos/producto_delete.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
 class ListProducto(ListView):
-    model = Producto
+    model = ProductoModel
     template_name = 'productos/productos_list.html'
 
 
 class Producto(ListView):
-    model = Producto
+    model = ProductoModel
     template_name = 'productos/index.html'
 
+def PorMenosde40(request):
 
+    if request.method == "GET":
+        try:
+            listaProductos = ProductoModel.objects.filter(precio__lte='40.000')
+            return render(request, 'productos/menos40.html', {'listaProductos': listaProductos})
+
+        except FileExistsError:
+            return render(request, "pages-404.html", {"msg": "No hay productos por menos de 40.000 , lo sentimos."})
+
+    else:
+        return render(request, "pages-404.html", {"msg": "Peticion Invalida"})
 
 
 #--------------------Categorias-------------------------------

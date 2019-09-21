@@ -65,6 +65,7 @@ ROOT_URLCONF = 'Proyectofindbuy.urls'
 LOGIN_REDIRECT_URL = reverse_lazy('productos:productos')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+AUTH_PROFILE_MODULE = 'clientes.Usuario'
 
 TEMPLATES = [
     {
