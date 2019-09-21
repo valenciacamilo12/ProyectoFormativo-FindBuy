@@ -7,7 +7,7 @@ from apps.productos.views import ListVenta, CreateVenta, UpdateVenta, DeleteVent
 
 urlpatterns = [
     #Productos
-    url(r'^$', Producto.as_view()),
+    url(r'^$', Producto.as_view(), name='inicio'),
     url(r'^producto/listar$', ListProducto.as_view(), name='producto_listar'),
     url(r'^producto/crear$', CreateProducto.as_view(), name='producto_crear'),
     url(r'^producto/editar/(?P<pk>[\d]+)/$', UpdateProducto.as_view(), name='producto_editar'),
