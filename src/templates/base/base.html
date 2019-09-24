@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% include "base/head_css.html" %}
 
-		{% include "base/javascript.html" %}
+
 
 	</head>
 	<body>
@@ -34,12 +34,13 @@
 
 			<!--Logo-->
 			<img src="{% static 'img/logo.png' %}" width="100" height="50" class="mx-auto">
-			<a href="{% url 'productos:producto_ofertas' %}">
-			<!--Buscador-->
+			<a href="{% url 'productos:inicio' %}">
+			<!--Buscador
 			<form class="form-inline ml-auto" action="/action_page.php">
 				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
 				<button class="btn btn-success" type="submit">Buscar</button>
 			</form>
+			-->
 
  		</div>
 		<header id="demo" class="carousel slide" data-ride="carousel">
@@ -112,15 +113,193 @@
 		</header>
 
 		<nav class="navbar navbar-expand-sm bg-dark mb-5">
-			<form class="form-inline mx-auto">
+			<form method="post" class="form-inline mx-auto" >
+				{% csrf_token %}
 				<a href="{% url 'productos:inicio' %}" class="btn btn-outline-light btn-lg mr-5">Inicio</a>
 				<a href="{% url 'productos:producto_ofertas' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Ofertas</a>
 				<button type="button" class="btn btn-outline-light btn-lg ml-5 mr-5" data-toggle="modal" data-target="#categoria">Categorias</button>
-
 				<a href="{% url 'productos:pormenosde40' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Por menos de 40.000</a>
 				<a href="{% url 'productos:informacion' %}" class="btn btn-outline-light btn-lg ml-5">Información</a>
 			</form>
 		</nav>
+
+		<div class="modal fade" id="categoria">
+		 	<div class="modal-dialog modal-dialog-centered modal-lg">
+		 		<div class="modal-content">
+
+		 		    <div class="modal-header">
+		 		    	<h4 class="modal-title mx-auto">Categorias</h4>
+		 		    </div>
+
+		 		    <div class="modal-body text-left">
+		 		    	<div class="row">
+		 		    		<div class="col">
+		 		    			<h5>Superior</h5>
+		 		    			<ul>
+		 		    				<li>
+		 		    					<a href="pages/categorias/camisas.html">Camisas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/camisetas.html">Camisetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/polos.html">Polos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/chaquetas.html">Chaquetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/sacos.html">Sacos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/esqueletos.html">Esqueletos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/blusas.html">Blusas</a>
+		 		    				</li>
+		 		    			</ul>
+		 		    		</div>
+
+		 		    		<div class="col">
+		 		    			<h5>Inferior</h5>
+		 		    			<ul>
+		 		    				<li>
+		 		    					<a href="pages/categorias/jeans.html">Jeans</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/pantalones.html">Pantalones</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/pantalonetas.html">Pantalonetas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/faldas.html">Faldas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 			   					<a href="pages/categorias/leguis.html">Leguis</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/sudaderas.html">Sudaderas</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col">
+		 			   			<h5>Calzado</h5>
+		 			   			<ul>
+		 			   				<li>
+		 			   					<a href="pages/categorias/tenis.html">Tenis</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/zapatillas.html">Zapatillas</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/sandalias.html">Sandalias</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/botas.html">Botas</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col">
+		 			   			<h5>Accesorios</h5>
+		 			   			<ul>
+		 			  				<li>
+		 			   					<a href="pages/categorias/gorros.html">Gorros & Sombreros</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/joyeria.html">Joyeria</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/relojes.html">Relojes</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/otros.html">Otros</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 			   		<div class="col">
+		 			   			<h5>Interior</h5>
+		 			   			<ul>
+		 			   				<li>
+		 			   					<a href="pages/categorias/hombre.html">Hombre</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/mujer.html">Mujer</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/niños.html">Niños</a>
+		 			   				</li>
+
+		 			   				<li>
+		 			   					<a href="pages/categorias/lenceria.html">Lenceria</a>
+		 			   				</li>
+		 			   			</ul>
+		 			   		</div>
+
+		 					<div class="col">
+		 						<h5>Conjuntos</h5>
+		 		    			<ul>
+		 			   				<li>
+		 		    					<a href="pages/categorias/conjuntos.html">Conjuntos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/disfraces.html">Disfraces</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/vestidos.html">Vestidos</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/trajes.html">Trajes</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/pijamas.html">Pijamas</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/deportes.html">Indumentaria deportiva</a>
+		 		    				</li>
+
+		 		    				<li>
+		 		    					<a href="pages/categorias/swimsuit.html">Trajes de baño</a>
+		 		    				</li>
+		 		    			</ul>
+		 		    		</div>
+		 		    	</div>
+		 		    </div>
+
+		 		    <div class="modal-footer">
+		 		    	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		 		    </div>
+
+		 		</div>
+		 	</div>
+		</div>
 
 
 
@@ -197,4 +376,5 @@
         </div>
       </div>
     </footer>
+    {% include "base/javascript.html" %}
 </html>

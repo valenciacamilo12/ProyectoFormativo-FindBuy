@@ -1,13 +1,13 @@
 from django.conf.urls import url
-from apps.productos.views import Producto, ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, OfertaProducto, Informacion
-from apps.productos.views import PorMenosde40
+from apps.productos.views import ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, OfertaProducto, Informacion
+from apps.productos.views import PorMenosde40, index
 from apps.productos.views import ListCategoria, CreateCategoria, UpdateCategoria, DeleteCategoria
 from apps.productos.views import ListProductoVenta, CreateProductoVenta, UpdateProductoVenta, DeleteProductoVenta
 from apps.productos.views import ListVenta, CreateVenta, UpdateVenta, DeleteVenta
 
 urlpatterns = [
     #Productos
-    url(r'^$', Producto.as_view(), name='inicio'),
+    url(r'^$', index, name='inicio'),
     url(r'^producto/listar$', ListProducto.as_view(), name='producto_listar'),
     url(r'^producto/crear$', CreateProducto.as_view(), name='producto_crear'),
     url(r'^producto/editar/(?P<pk>[\d]+)/$', UpdateProducto.as_view(), name='producto_editar'),

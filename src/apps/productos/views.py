@@ -48,9 +48,28 @@ class ListProducto(ListView):
     template_name = 'productos/productos_list.html'
 
 
-class Producto(ListView):
-    model = ProductoModel
-    template_name = 'productos/index.html'
+def index(request):
+
+    if request.method == "GET":
+        try:
+            listaProductos = ProductoModel.objects.all()
+            return render(request, 'productos/index.html', {'listaProductos': listaProductos})
+
+        except FileExistsError:
+            return render(request, "pages-404.html", {"msg": "No hay productos xd, lo sentimos."})
+
+    elif request.method == "POST":
+        print("Hola entre a post")
+        '''
+        try:
+            
+            #listaProductos = ProductoModel.objects.all()
+            #return render(request, 'productos/index.html', {'listaProductos': listaProductos})
+
+        except FileExistsError:
+            return render(request, "pages-404.html", {"msg": "No hay productos xd, lo sentimos."})
+        '''
+
 
 def PorMenosde40(request):
 
@@ -67,7 +86,6 @@ def PorMenosde40(request):
 
 
 #--------------------Categorias-------------------------------
-
 
 class ListCategoria(ListView):
     model = Categoria

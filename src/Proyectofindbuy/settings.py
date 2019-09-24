@@ -62,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Proyectofindbuy.urls'
-LOGIN_REDIRECT_URL = reverse_lazy('productos:productos')
+LOGIN_REDIRECT_URL = reverse_lazy('productos:inicio')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 AUTH_PROFILE_MODULE = 'clientes.Usuario'
@@ -123,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'UTC'
 

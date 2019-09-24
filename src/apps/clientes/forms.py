@@ -1,24 +1,31 @@
-from django import forms
-from apps.clientes.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
-class FormCliente(forms.ModelForm):
+class RegistroUsuarioForm(UserCreationForm):
+
     class Meta:
         model = User
 
-        fields = "__all__"
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'username',
+        ]
 
         labels = {
-            'nombre': 'Nombre',
-            'apellido': 'Apellido',
-            'correo': 'Correo',
-            'nombre_usuario': 'Nombre Usuario',
-            'contrasena': 'Contraseña',
-            'tienda': 'Tienda',
+            'first_name': 'Nombres',
+            'last_name': 'Apellidos',
+            'email': 'Email',
+            'username': 'Usuario',
         }
 
-
     def __init__(self, *args, **kwargs):
-        super(FormCliente, self).__init__(*args, **kwargs)
+        super(RegistroUsuarioForm, self).__init__(*args, **kwargs)
+        self.fields['first_name'].widget.attrs.update({'placeholder': 'Digite sus nombres'})
+        self.fields['last_name'].widget.attrs.update({'placeholder': 'Digite sus apellidos'})
+        self.fields['email'].widget.attrs.update({'placeholder': 'Digite su correo electronico'})
+        self.fields['username'].widget.attrs.update({'placeholder': 'Digite su usuario'})
 
         for field in self.fields:
             self.fields[field].widget.attrs.update({'class': 'form-control'})
