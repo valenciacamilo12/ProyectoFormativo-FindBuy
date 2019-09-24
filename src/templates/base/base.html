@@ -329,9 +329,9 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Como Comprar</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Como Comprar</a></li>
-                <li><a href="#" class="py-2 d-block">Garantia al Cliente</a></li>
-                <li><a href="#" class="py-2 d-block">Ofertas</a></li>
+                <li><a href="{% url 'cliente:comocomprar' %}" class="py-2 d-block">Como Comprar</a></li>
+                <li><a href="{% url 'cliente:garantia' %}" class="py-2 d-block">Garantia al Cliente</a></li>
+                <li><a href="{% url 'productos:producto_ofertas' %}" class="py-2 d-block">Ofertas</a></li>
 			  </ul>
             </div>
 		  </div>
@@ -340,8 +340,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Como Vender</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Como Vender</a></li>
-                <li><a href="#" class="py-2 d-block">Centro Para Vendedores</a></li>
+                <li><a href="{% url 'cliente:comovender' %}" class="py-2 d-block">Como Vender</a></li>
+                <li><a href="{% url 'cliente:centrovendoderes' %}" class="py-2 d-block">Centro Para Vendedores</a></li>
 			  </ul>
             </div>
 		  </div>
@@ -350,8 +350,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Ayuda</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Seguridad</a></li>
-                <li><a href="#" class="py-2 d-block">Preguntas Frecuentes</a></li>
+                <li><a href="{% url 'cliente:seguridad' %}" class="py-2 d-block">Seguridad</a></li>
+                <li><a href="{% url 'cliente:preguntas' %}" class="py-2 d-block">Preguntas Frecuentes</a></li>
 			  </ul>
             </div>
 		  </div>
