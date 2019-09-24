@@ -33,7 +33,7 @@ class OfertaProducto(ListView):
 # Esto es una Prueba
 class Informacion(ListView):
     model = ProductoModel
-    template_name = 'informacion/comocomprar.html'
+    template_name = 'informacion/preguntas.html'
 
 
 class DeleteProducto(DeleteView):

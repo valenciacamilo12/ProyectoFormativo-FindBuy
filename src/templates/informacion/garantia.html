@@ -1,0 +1,68 @@
+{% extends "base/base.html" %}
+{% block content %}
+{% load static %}
+
+		{% include "base/head_css.html" %}
+
+        <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'img/about2.jpeg' %});">
+					</div>
+					<div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+				  		<div class="heading-section-bold mb-4 mt-md-5">
+							<div class="ml-md-0">
+								<h2 class="mb-4">Nuestra Garantia</h2>
+							</div>
+						</div>
+						<div class="pb-md-5 pb-4">
+						  <p>Queremos que compres en Find&Buy todo lo que quieras con la mayor tranqulidad por eso, nos aseguraremos de que recuperes tu dinero en caso de no recibir lo que querias.Has click en una opción.</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<br>
+
+        <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'img/about3.jpeg' %});">
+					</div>
+					<div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+				  		<div class="heading-section-bold mb-4 mt-md-5">
+							<div class="ml-md-0">
+								<h2 class="mb-4">Como Comunicarme Con El Vendedor</h2>
+							</div>
+						</div>
+						<div class="pb-md-5 pb-4">
+							<p>Para comunicarte con el vendedor debes entrar al perfil del vendedor y dar click en el apartado de telefono , y asi de simple te puedes comunicar con el vendedor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <br>
+
+        <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'img/about3.jpeg' %});">
+					</div>
+					<div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+				  		<div class="heading-section-bold mb-4 mt-md-5">
+							<div class="ml-md-0">
+								<h2 class="mb-4">Necesitas Ayuda?</h2>
+							</div>
+						</div>
+						<div class="pb-md-5 pb-4">
+							<p>En el apartado de preguntas frecuentes puedes introducir tu pregunta y el caso en particular, por lo general respondemos en las primeras 12 horas de enviado el mensaje.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% include "base/javascript.html" %}
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+{% block content %}
+{% load static %}
+
+		{% include "base/head_css.html" %}
+
+        <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'img/about2.jpeg' %});">
+					</div>
+					<div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+				  		<div class="heading-section-bold mb-4 mt-md-5">
+							<div class="ml-md-0">
+								<h2 class="mb-4">Seguridad</h2>
+							</div>
+						</div>
+						<div class="pb-md-5 pb-4">
+						  <p>Find&buy es una plataforma completamente segura contamos con las herramientas necesarias para que puedas comprar y vender sin ningun inconveniente ,tenemos mucha facilidad de pago utilizando servicios como paypal para brindarte completa seguridad a la hora de comprar un articulo ,tambien cuando creas una cuenta es necesario que introduzcas una contreseña completamente segura para que no seas victima de un fraude informatico o robo de informacion ¡la seguridad es de todos.!</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        {% include "base/javascript.html" %}
+{% endblock content %}
