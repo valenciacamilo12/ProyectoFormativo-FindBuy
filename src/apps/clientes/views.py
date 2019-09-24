@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from apps.clientes.models import User,Usuario
+from apps.clientes.models import User, Usuario
 from apps.clientes.forms import RegistroUsuarioForm
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 from django.urls import reverse_lazy
