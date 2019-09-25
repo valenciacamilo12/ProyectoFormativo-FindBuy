@@ -57,25 +57,41 @@ class VentaForm(forms.ModelForm):
         model = Venta
 
         fields = [
-            'codigo',
             'fecha',
             'total',
-            'cliente',
+            'firstname_cliente',
+            'lastname_cliente',
+            'pais_cliente',
+            'direccion_cliente',
+            'ciudad_cliente',
+            'telefono_cliente',
+            'correo_cliente',
         ]
 
         labels = {
-            'codigo':'Codigo',
-            'fecha':'Fecha',
-            'total':'Total',
-            'cliente':'Cliente',
+            'fecha': 'Fecha',
+            'total': 'Total',
+            'firstname_cliente':'Nombres',
+            'lastname_cliente':'Apellidos',
+            'pais_cliente':'Pais',
+            'direccion_cliente':'Direccion',
+            'ciudad_cliente':'Ciudad',
+            'telefono_cliente':'Telefono',
+            'correo_cliente':'Correo',
         }
 
-        widgets = {
-            'codigo': forms.TextInput(attrs={'class':'form-control'}),
-            'fecha': forms.TextInput(attrs={'class':'form-control'}),
-            'total': forms.TextInput(attrs={'class':'form-control'}),
-            'cliente': forms.Select(attrs={'class':'form-control'}),
-        }
+    def __init__(self, *args, **kwargs):
+        super(VentaForm, self).__init__(*args, **kwargs)
+        self.fields['firstname_cliente'].widget.attrs.update({'placeholder': 'Digite sus nombres'})
+        self.fields['lastname_cliente'].widget.attrs.update({'placeholder': 'Digite sus apellidos'})
+        self.fields['pais_cliente'].widget.attrs.update({'placeholder': 'Digite su Pais'})
+        self.fields['direccion_cliente'].widget.attrs.update({'placeholder': 'Digite su Direccion'})
+        self.fields['ciudad_cliente'].widget.attrs.update({'placeholder': 'Digite su Ciudad'})
+        self.fields['telefono_cliente'].widget.attrs.update({'placeholder': 'Digite su Telefono'})
+        self.fields['correo_cliente'].widget.attrs.update({'placeholder': 'Digite su Correo'})
+
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})
 
 
 class VentaProductoForm(forms.ModelForm):

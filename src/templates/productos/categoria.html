@@ -1,0 +1,74 @@
+{% extends "base/base.html" %}
+{% block content %}
+{% load static %}
+
+        <section>
+			<h1>Texto Ejemplo</h1>
+
+				<div class="row">
+					<div class="col">
+						{% for producto in listaProductos %}
+							<button type="button" data-toggle="modal" data-target="#img4" class="btn btn-dark m-5">
+								<h5>Tienda {{producto.tienda}}</h5>
+								<a href="{% url 'productos:producto_detalle' producto.id_producto %}"><img src="{{producto.foto.url}}" width="250px" height="250px" class="rounded"></a>
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+        </section>
+
+		<hr>
+
+		<!--Modal para escoger un rol-->
+		<div class="modal fade" id="rol">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4 class="modal-title mx-auto">Seleccione un rol</h4>
+					</div>
+
+					<div class="modal-footer">
+						<a href="pages/signin-cliente.html" class="btn btn-primary mx-auto">Cliente</a>
+						<a href="pages/signin-tienda.html" class="btn btn-primary mx-auto">Tienda</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--Modal alerta reserva-->
+		<div class="modal fade" id="alert-r">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="alert alert-success text-center">
+							Su reserva se ha realizado con exito
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Modal alerta compra-->
+		<div class="modal fade" id="alert-c">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="alert alert-success text-center">
+							Su compra se ha realizado con exito
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</center>
+	</body>
+{% endblock content %}

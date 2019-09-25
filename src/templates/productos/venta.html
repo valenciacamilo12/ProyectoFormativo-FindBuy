@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Find&Buy | Venta</title>
+    {% include "base/head_css.html" %}
+  </head>
+    <section class="ftco-section">
+      <?php $fcha = date("Y-m-d");?>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 ftco-animate">
+              <form action="#" class="billing-form" method="post">{% csrf_token %}
+					<h3 class="mb-4 billing-heading">Detalles De La Compra</h3>
+
+                    <input type="date" class="form-control"  value="<?php echo $fcha;?>" >
+
+                    <div class="row align-items-end">
+		          		<div class="col-md-6">
+		                <div class="form-group">
+                            {{ form.firstname_cliente.errors }}
+		                	<label>First Name</label>
+		                    {{ form.firstname_cliente }}
+		                </div>
+		              </div>
+
+		             <div class="col-md-6">
+		                <div class="form-group">
+                            {{ form.lastname_cliente.errors }}
+		                	<label>Last Name</label>
+		                    {{ form.lastname_cliente }}
+		                </div>
+	                </div>
+                        <div class="w-100"></div>
+			            <div class="col-md-12">
+			            	<div class="form-group">
+                            {{ form.pais_cliente.errors }}
+		                	<label>Pais Cliente</label>
+		                    {{ form.pais_cliente }}
+		                </div>
+			            </div>
+                        <div class="w-100"></div>
+			            <div class="col-md-12">
+			            	<div class="form-group">
+                            {{ form.direccion_cliente.errors }}
+		                	<label>Direccion De Residencia</label>
+		                    {{ form.direccion_cliente }}
+		                </div>
+			            </div>
+
+			            <div class="col-md-12">
+			            	<div class="form-group">
+                            {{form.ciudad_cliente.errors}}
+		                	<label>Ciudad</label>
+		                    {{form.ciudad_cliente}}
+		                </div>
+			            </div>
+			            <div class="w-100"></div>
+			            <div class="col-md-6">
+		                <div class="form-group">
+		                	{{form.telefono_cliente.errors}}
+                            <label>Telefono</label>
+		                    {{form.telefono_cliente}}
+		                </div>
+		              </div>
+		              <div class="col-md-6">
+		                <div class="form-group">
+		                	{{form.correo_cliente.errors}}
+                            <label>Correo Electronico</label>
+                            {{form.correo_cliente}}
+                        </div>
+                      </div>
+                <button class="btn-success" type="submit">Enviar
+                </button>
+
+
+	          	</form><!-- END -->
+
+    </section>
+		
+
+    <footer class="ftco-footer ftco-section">
+      	<div class="container">
+
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Find&Buy</h2>
+              <p>Es una plataforma que nos permite comprar lo que mas nos gusta cuando quieras y como quieras</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Como Comprar</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'cliente:comocomprar' %}" class="py-2 d-block">Como Comprar</a></li>
+                <li><a href="{% url 'cliente:garantia' %}" class="py-2 d-block">Garantia al Cliente</a></li>
+                <li><a href="{% url 'productos:producto_ofertas' %}" class="py-2 d-block">Ofertas</a></li>
+			  </ul>
+            </div>
+		  </div>
+
+		  <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Como Vender</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'cliente:comovender' %}" class="py-2 d-block">Como Vender</a></li>
+                <li><a href="{% url 'cliente:centrovendoderes' %}" class="py-2 d-block">Centro Para Vendedores</a></li>
+			  </ul>
+            </div>
+		  </div>
+
+		  <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Ayuda</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'cliente:seguridad' %}" class="py-2 d-block">Seguridad</a></li>
+                <li><a href="{% url 'cliente:preguntas' %}" class="py-2 d-block">Preguntas Frecuentes</a></li>
+			  </ul>
+            </div>
+		  </div>
+
+		  <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Tienes alguna Pregunta?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Santa Isabel Dg. 27a #4-2 a 4-114, Dosquebradas, Risaralda, COLOMBIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+57 3136907549</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@findbuy.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+
+		</div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			  </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  {% include "base/javascript.html" %}
+
+  <script>
+		$(document).ready(function(){
+
+		var quantitiy=0;
+		   $('.quantity-right-plus').click(function(e){
+		        
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+		        
+		        // If is not undefined
+		            
+		            $('#quantity').val(quantity + 1);
+
+		          
+		            // Increment
+		        
+		    });
+
+		     $('.quantity-left-minus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+		        
+		        // If is not undefined
+		      
+		            // Increment
+		            if(quantity>0){
+		            $('#quantity').val(quantity - 1);
+		            }
+		    });
+		    
+		});
+	</script>
+    
+  </body>
+</html>

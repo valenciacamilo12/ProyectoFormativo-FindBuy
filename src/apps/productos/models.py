@@ -1,6 +1,7 @@
 from django.db import models
 from apps.tienda.models import Tienda
 from apps.clientes.models import User
+from datetime import datetime
 
 class Categoria(models.Model):
     id_categoria = models.AutoField(primary_key=True)
@@ -25,10 +26,15 @@ class Producto(models.Model):
 
 class Venta(models.Model):
     id_venta = models.AutoField(primary_key=True)
-    codigo = models.IntegerField()
-    fecha = models.CharField(max_length=40)
+    fecha = models.DateField(default=datetime.now)
     total = models.CharField(max_length=40)
-    cliente = models.ForeignKey(User, models.CASCADE, null=True, blank=True)
+    firstname_cliente = models.CharField(max_length=40, default=True)
+    lastname_cliente = models.CharField(max_length=40, default=True)
+    pais_cliente = models.CharField(max_length=40)
+    direccion_cliente = models.CharField(max_length=40)
+    ciudad_cliente = models.CharField(max_length=40)
+    telefono_cliente = models.CharField(max_length=40)
+    correo_cliente = models.CharField(max_length=40)
 
     def __str__(self):
         return '{}'.format(self.id_venta)
