@@ -13,7 +13,7 @@ class Categoria(models.Model):
 class Producto(models.Model):
     id_producto = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=40)
-    precio = models.CharField(max_length=40)
+    precio = models.FloatField(max_length=40)
     foto = models.ImageField(blank=True, width_field='width_field', height_field='height_field')
     width_field = models.IntegerField(default=0)
     height_field = models.IntegerField(default=0)
@@ -26,10 +26,10 @@ class Producto(models.Model):
 
 class Venta(models.Model):
     id_venta = models.AutoField(primary_key=True)
-    fecha = models.DateField(default=datetime.now)
-    total = models.CharField(max_length=40)
-    firstname_cliente = models.CharField(max_length=40, default=True)
-    lastname_cliente = models.CharField(max_length=40, default=True)
+    fecha = models.DateField(default=datetime.now, null=True)
+    total = models.CharField(max_length=40, null=True, default=True)
+    firstname_cliente = models.CharField(max_length=40)
+    lastname_cliente = models.CharField(max_length=40)
     pais_cliente = models.CharField(max_length=40)
     direccion_cliente = models.CharField(max_length=40)
     ciudad_cliente = models.CharField(max_length=40)

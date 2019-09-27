@@ -3,6 +3,7 @@ from django.views.generic import ListView, CreateView, DeleteView, UpdateView, D
 from apps.productos.forms import ProductoForm, CategoriaForm, VentaForm, VentaProductoForm
 from django.urls import reverse_lazy
 from apps.productos.models import Producto as ProductoModel, Categoria as CategoriaModel, Venta, VentaProducto
+from datetime import date
 from django.http import HttpResponseRedirect
 
 class CreateProducto(CreateView):
@@ -106,31 +107,36 @@ def PorMenosde40(request):
 
 
 
-def Venta(request):
+def venta(request, id_producto):
+
     try:
-        #datosProducto = ProductoModel.objects.get(datusuario=request.user.id)
+        form_class = VentaForm
+        datosProducto = ProductoModel.objects.get(id_producto=id_producto)
+
+        fecha = str(date.today())
 
         if request.method == "GET":
-            form = VentaForm()
+            form = VentaForm
             return render(request, 'productos/venta.html', {'form': form})
 
         elif request.method == "POST":
-
+            request.POST['fecha'] = fecha
+            request.POST['total'] = datosProducto.precio
             form = VentaForm(request.POST)
-
             if form.is_valid():
-                print("Holaaa")
                 form.save()
 
+
             form = VentaForm()
-            return render(request, "productos/venta.html", {'form': form})
+            return render(request, "productos/venta.html", {'form': form, 'fecha': fecha, 'total': datosProducto.precio})
 
         else:
             return render(request, "pages-404.html", {"msg": "Peticion Invalida"})
 
+
+
     except ProductoModel.DoesNotExist:
-        return render(request, "pages-404.html",
-                      {"msg": "El Usuario no tiene Datos regidtrados. Comuniquede con el Administrador de Sistema"})
+        return render(request, "pages-404.html",{"msg": "El Usuario no tiene Datos registrados. Comuniquede con el Administrador de Sistema"})
 
 
 

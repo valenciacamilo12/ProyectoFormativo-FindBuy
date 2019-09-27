@@ -80,10 +80,12 @@ class VentaForm(forms.ModelForm):
             'correo_cliente':'Correo',
         }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self,*args, **kwargs):
         super(VentaForm, self).__init__(*args, **kwargs)
-        self.fields['firstname_cliente'].widget.attrs.update({'placeholder': 'Digite sus nombres'})
-        self.fields['lastname_cliente'].widget.attrs.update({'placeholder': 'Digite sus apellidos'})
+        self.fields['fecha'].widget = forms.HiddenInput()
+        self.fields['total'].widget = forms.HiddenInput()
+        self.fields['firstname_cliente'].widget.attrs.update({'placeholder': 'Digite sus Nombres'})
+        self.fields['lastname_cliente'].widget.attrs.update({'placeholder': 'Digite su Apellidos'})
         self.fields['pais_cliente'].widget.attrs.update({'placeholder': 'Digite su Pais'})
         self.fields['direccion_cliente'].widget.attrs.update({'placeholder': 'Digite su Direccion'})
         self.fields['ciudad_cliente'].widget.attrs.update({'placeholder': 'Digite su Ciudad'})

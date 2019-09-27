@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from apps.productos.views import ListProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, ofertas, informacion
-from apps.productos.views import PorMenosde40, index, Venta, categoria
+from apps.productos.views import PorMenosde40, index, venta, categoria
 from apps.productos.views import ListCategoria, CreateCategoria, UpdateCategoria, DeleteCategoria
 from apps.productos.views import ListProductoVenta, CreateProductoVenta, UpdateProductoVenta, DeleteProductoVenta
 from apps.productos.views import ListVenta, CreateVenta, UpdateVenta, DeleteVenta
@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^ofertas$', ofertas, name='producto_ofertas'),
     url(r'^pormenosde40', PorMenosde40, name="pormenosde40"),
     url(r'^informacion$', informacion, name='informacion'),
-    url(r'^venta$', Venta, name='venta'),
+    url(r'^venta/(?P<id_producto>\d+)', venta, name='venta'),
     url(r'^categoria/(?P<idcategoria>\d+)', categoria, name="categoria"),
 
 
