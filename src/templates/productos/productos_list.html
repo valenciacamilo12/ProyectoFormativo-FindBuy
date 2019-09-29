@@ -13,12 +13,14 @@
                         <th scope="col">Existencias</th>
                         <th scope="col">Tienda</th>
                         <th scope="col">Categoria</th>
+                        <th scope="col">Id Cliente</th>
                     </tr>
                 </thead>
             {% for producto in object_list %}
                 <tbody>
                     <tr class="table-light">
                         <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.id_cliente}}</td>
                         <td>{{ producto.precio }}</td>
                         <td>{{ producto.existencias }}</td>
                         <td>{{ producto.tienda }}</td>

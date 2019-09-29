@@ -17,7 +17,6 @@
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="{% url 'productos:inicio' %}">Inicio</a>
 					<a class="dropdown-item" href="{% url 'productos:producto_ofertas' %}">Ofertas</a>
-					<a class="dropdown-item" href="pages/categorias.html">Categorias</a>
 					<a class="dropdown-item" href="{% url 'productos:pormenosde40' %}">Por menos de 40.000</a>
 					<a class="dropdown-item" href="{% url 'productos:informacion' %}">Información</a>
 				</div>
@@ -28,16 +27,21 @@
 				<a href="{% url 'login' %}" class="btn btn-info mr-xl-2">Login</a>
 				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#rol">Sign In</button>
 			</form>
+			{%if perms.usuario.is_tienda%}
+			<form class="form-inline ml-5" id="boton">
+				<a href="{% url 'tienda:tienda_crear' user.pk %}" class="btn btn-info mr-xl-2">Registrarme Como Tienda</a>
+			</form>
+			{% endif %}
 
 			<!--Logo-->
 			<img src="{% static 'img/logo.png' %}" width="100" height="50" class="mx-auto">
 			<a href="{% url 'productos:inicio' %}">
-			<!--Buscador
+			<!--Buscador-->
 			<form class="form-inline ml-auto" action="/action_page.php">
 				<input type="text" class="form-control mr-xl-2" placeholder="Buscar">
 				<button class="btn btn-success" type="submit">Buscar</button>
 			</form>
-			-->
+
 
  		</div>
 		<header id="demo" class="carousel slide" data-ride="carousel">

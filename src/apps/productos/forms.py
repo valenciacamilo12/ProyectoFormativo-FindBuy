@@ -6,32 +6,34 @@ class ProductoForm(forms.ModelForm):
         model = Producto
 
         fields = [
+            'id_cliente',
             'nombre',
             'precio',
             'foto',
             'existencias',
-            'tienda',
             'categoria',
         ]
 
         labels = {
+            'id_cliente': 'Id Cliente',
             'nombre': 'Nombre',
             'precio': 'Precio',
             'foto': 'Foto',
             'existencias': 'Existencias',
-            'tienda': 'Tienda',
             'categoria': 'Categoria',
 
         }
 
-        widgets = {
-            'nombre': forms.TextInput(attrs={'class': 'form-control'}),
-            'precio': forms.TextInput(attrs={'class': 'form-control'}),
-            'existencias': forms.TextInput(attrs={'class': 'form-control'}),
-            'tienda': forms.Select(attrs={'class': 'form-control'}),
-            'categoria': forms.Select(attrs={'class':'form-control'}),
-        }
+    def __init__(self, *args, **kwargs):
+        super(ProductoForm, self).__init__(*args, **kwargs)
+        self.fields['id_cliente'].widget = forms.HiddenInput()
+        self.fields['nombre'].widget.attrs.update({'placeholder': 'Digite el Nombre Del Producto'})
+        self.fields['precio'].widget.attrs.update({'placeholder': 'Digite el Precio Del Producto'})
+        self.fields['existencias'].widget.attrs.update({'placeholder': 'Digite las Existencias Del Producto'})
+        self.fields['categoria'].widget.attrs.update({'placeholder': 'Digite la Categoria Del Producto'})
 
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})
 
 
 
@@ -80,7 +82,7 @@ class VentaForm(forms.ModelForm):
             'correo_cliente':'Correo',
         }
 
-    def __init__(self,*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(VentaForm, self).__init__(*args, **kwargs)
         self.fields['fecha'].widget = forms.HiddenInput()
         self.fields['total'].widget = forms.HiddenInput()

@@ -1,16 +1,27 @@
+from django.http import request
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
 from apps.productos.forms import ProductoForm, CategoriaForm, VentaForm, VentaProductoForm
 from django.urls import reverse_lazy
 from apps.productos.models import Producto as ProductoModel, Categoria as CategoriaModel, Venta, VentaProducto
+from django.shortcuts import render, redirect
 from datetime import date
-from django.http import HttpResponseRedirect
+
 
 class CreateProducto(CreateView):
     model = ProductoModel
     form_class = ProductoForm
+
+    def get_initial(self, *args, **kwargs):
+        initial = super(CreateProducto, self).get_initial(**kwargs)
+        initial['id_cliente'] = self.request.user.id
+        return initial
+
     template_name = 'productos/producto_form.html'
     success_url = reverse_lazy('productos:producto_listar')
+
+
+
 
 
 class DetailViewProducto(DetailView):
@@ -110,7 +121,6 @@ def PorMenosde40(request):
 def venta(request, id_producto):
 
     try:
-        form_class = VentaForm
         datosProducto = ProductoModel.objects.get(id_producto=id_producto)
 
         fecha = str(date.today())
@@ -136,7 +146,7 @@ def venta(request, id_producto):
 
 
     except ProductoModel.DoesNotExist:
-        return render(request, "pages-404.html",{"msg": "El Usuario no tiene Datos registrados. Comuniquede con el Administrador de Sistema"})
+        return render(request, "pages-404.html", {"msg": "El Usuario no tiene Datos registrados. Comuniquede con el Administrador de Sistema"})
 
 
 

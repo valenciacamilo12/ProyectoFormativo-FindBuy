@@ -1,7 +1,11 @@
 from django.db import models
 from apps.tienda.models import Tienda
-from apps.clientes.models import User
+from apps.clientes.models import Usuario
+from django.contrib.auth.models import User
 from datetime import datetime
+from django.http import request
+
+
 
 class Categoria(models.Model):
     id_categoria = models.AutoField(primary_key=True)
@@ -12,13 +16,13 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
     id_producto = models.AutoField(primary_key=True)
+    id_cliente = models.CharField(max_length=40)
     nombre = models.CharField(max_length=40)
     precio = models.FloatField(max_length=40)
-    foto = models.ImageField(blank=True, width_field='width_field', height_field='height_field')
+    foto = models.ImageField(width_field='width_field', height_field='height_field')
     width_field = models.IntegerField(default=0)
     height_field = models.IntegerField(default=0)
     existencias = models.IntegerField()
-    tienda = models.ForeignKey(Tienda, models.CASCADE, null=True, blank=True)
     categoria = models.ForeignKey(Categoria, models.CASCADE, null=True, blank=True)
 
     def __str__(self):
