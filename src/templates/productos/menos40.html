@@ -8,7 +8,7 @@
 						<div class="col">
 							{% for producto in listaProductos %}
 								<button type="button" data-toggle="modal" data-target="#img4" class="btn btn-dark m-5">
-									<h5>Tienda {{producto.tienda}}</h5>
+									<h5>{{producto.nombre}}</h5>
 									<a href="{% url 'productos:producto_detalle' producto.id_producto %}"><img src="{{producto.foto.url}}" width="250px" height="250px" class="rounded"></a>
 								</button>
 							{% endfor %}

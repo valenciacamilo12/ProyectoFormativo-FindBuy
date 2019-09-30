@@ -3,7 +3,7 @@
 {% block content %}
     <br>
     <div class="container">
-        {% if object_list %}
+
             <h3 class="text-center">Listar productos</h3>
             <table class="table table-hover">
                 <thead>
@@ -11,35 +11,27 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Existencias</th>
-                        <th scope="col">Tienda</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col">Id Cliente</th>
                     </tr>
                 </thead>
-            {% for producto in object_list %}
+            {% for producto in listaProductos %}
                 <tbody>
                     <tr class="table-light">
                         <td>{{ producto.nombre }}</td>
-                        <td>{{ producto.id_cliente}}</td>
                         <td>{{ producto.precio }}</td>
                         <td>{{ producto.existencias }}</td>
-                        <td>{{ producto.tienda }}</td>
                         <td>{{ producto.categoria }}</td>
+
                         <td>
-                            <a href="{% url 'productos:producto_crear' %}" class="btn btn-info">Nuevo</a>
                             <a href="{% url 'productos:producto_editar' producto.id_producto %}" class="btn btn-success">Editar</a>
                             <a href="{% url 'productos:producto_eliminar' producto.id_producto %}" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>
+
             {% endfor %}
+            <a href="{% url 'productos:producto_crear' %}" class="btn btn-info">Nuevo</a>
             </table>
-        {% else %}
-        <div class="container">
-            <h3>Aun no hay productos registrados</h3>
-        </div>
-        <br>
-        {% endif %}
     </div>
 
 

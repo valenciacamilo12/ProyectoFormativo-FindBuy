@@ -32,6 +32,8 @@ class Venta(models.Model):
     id_venta = models.AutoField(primary_key=True)
     fecha = models.DateField(default=datetime.now, null=True)
     total = models.CharField(max_length=40, null=True, default=True)
+    id_producto = models.CharField(max_length=40)
+    id_tienda = models.CharField(max_length=40, default=True)
     firstname_cliente = models.CharField(max_length=40)
     lastname_cliente = models.CharField(max_length=40)
     pais_cliente = models.CharField(max_length=40)

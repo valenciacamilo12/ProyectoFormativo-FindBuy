@@ -3,43 +3,49 @@
 {% block content %}
     <br>
     <div class="container">
-        {% if object_list %}
-            <h1 class="text-center">Lista De Ventas</h1>
-            <h4 class="text-center">¡Felicitaciones!</h4>
-            <h2 class="text-center">Sigue asi</h2>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Id Venta Producto</th>
-                        <th scope="col">Codigo</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Cliente</th>
-                    </tr>
-                </thead>
-            {% for venta in object_list %}
+
+        <h1 class="text-center">Lista De Ventas</h1>
+        <h4 class="text-center">¡Felicitaciones!</h4>
+        <h2 class="text-center">Sigue asi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Nombre Del Comprador</th>
+                    <th scope="col">Apellidos Del Comprador</th>
+                    <th scope="col">Pais Del Cliente</th>
+                    <th scope="col">Direccion Del Cliente</th>
+                    <th scope="col">Ciudad Cliente</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Correo Del Cliente</th>
+                </tr>
+            </thead>
+            {% for venta in listaVentas %}
                 <tbody>
                     <tr class="table-light">
-                        <td>{{ venta.id_venta }}</td>
-                        <td>{{ venta.codigo }}</td>
                         <td>{{ venta.fecha }}</td>
                         <td>{{ venta.total }}</td>
-                        <td>{{ venta.cliente }}</td>
+                        <td>{{ venta.firstname_cliente }}</td>
+                        <td>{{ venta.lastname_cliente }}</td>
+                        <td>{{ venta.pais_cliente }}</td>
+                        <td>{{ venta.direccion_cliente }}</td>
+                        <td>{{ venta.ciudad_cliente }}</td>
+                        <td>{{ venta.telefono_cliente }}</td>
+                        <td>{{ venta.correo_cliente }}</td>
                         <td>
-                            <a href="{% url 'productos:venta_crear' %}" class="btn btn-info">Nueva</a>
                             <a href="{% url 'productos:venta_editar' venta.id_venta %}" class="btn btn-success">Editar</a>
                             <a href="{% url 'productos:venta_eliminar' venta.id_venta %}" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>
             {% endfor %}
+            <a href="{% url 'productos:venta_crear' %}" class="btn btn-info">Nueva</a>
             </table>
-        {% else %}
-        <div class="container">
-            <h3>No Hay Ventas Registradas</h3>
-        </div>
+
+
         <br>
-        {% endif %}
+
     </div>
 
 

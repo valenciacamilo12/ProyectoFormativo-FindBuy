@@ -9,7 +9,7 @@
 						<div class="col">
 							{% for oferta in listaProductos %}
 								<button type="button" data-toggle="modal" data-target="#img4" class="btn btn-dark m-5">
-									<h5>Tienda {{oferta.tienda}}</h5>
+									<h5>{{oferta.nombre}}</h5>
 									<a href="{% url 'productos:producto_detalle' oferta.id_producto %}"><img src="{{ oferta.foto.url}}" width="250px" height="250px" class="rounded"></a>
 								</button>
 							{% endfor %}

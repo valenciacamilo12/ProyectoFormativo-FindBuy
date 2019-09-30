@@ -61,6 +61,8 @@ class VentaForm(forms.ModelForm):
         fields = [
             'fecha',
             'total',
+            'id_producto',
+            'id_tienda',
             'firstname_cliente',
             'lastname_cliente',
             'pais_cliente',
@@ -73,6 +75,8 @@ class VentaForm(forms.ModelForm):
         labels = {
             'fecha': 'Fecha',
             'total': 'Total',
+            'id_producto': 'Id Producto',
+            'id_tienda': 'Id Tienda',
             'firstname_cliente':'Nombres',
             'lastname_cliente':'Apellidos',
             'pais_cliente':'Pais',
@@ -86,6 +90,8 @@ class VentaForm(forms.ModelForm):
         super(VentaForm, self).__init__(*args, **kwargs)
         self.fields['fecha'].widget = forms.HiddenInput()
         self.fields['total'].widget = forms.HiddenInput()
+        self.fields['id_producto'].widget = forms.HiddenInput()
+        self.fields['id_tienda'].widget = forms.HiddenInput()
         self.fields['firstname_cliente'].widget.attrs.update({'placeholder': 'Digite sus Nombres'})
         self.fields['lastname_cliente'].widget.attrs.update({'placeholder': 'Digite su Apellidos'})
         self.fields['pais_cliente'].widget.attrs.update({'placeholder': 'Digite su Pais'})
