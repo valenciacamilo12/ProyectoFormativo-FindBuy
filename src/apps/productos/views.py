@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
 from apps.productos.forms import ProductoForm, CategoriaForm, VentaForm, VentaProductoForm
 from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from apps.productos.models import Producto as ProductoModel, Categoria as CategoriaModel, Venta as VentaModel, VentaProducto
 from django.shortcuts import render, redirect
 from datetime import date
@@ -163,10 +165,7 @@ def venta(request, id_producto):
             form = VentaForm(request.POST)
             if form.is_valid():
                 form.save()
-
-
-            form = VentaForm()
-            return render(request, "productos/venta.html", {'form': form, 'fecha': fecha, 'total': datosProducto.precio})
+            return HttpResponseRedirect(reverse('productos:inicio'))
 
         else:
             return render(request, "pages-404.html", {"msg": "Peticion Invalida"})
