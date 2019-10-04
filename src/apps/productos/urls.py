@@ -2,7 +2,6 @@ from django.conf.urls import url
 from apps.productos.views import listarProducto, CreateProducto, UpdateProducto, DetailViewProducto, DeleteProducto, ofertas, informacion
 from apps.productos.views import PorMenosde40, index, venta, categoria
 from apps.productos.views import ListCategoria, CreateCategoria, UpdateCategoria, DeleteCategoria
-from apps.productos.views import ListProductoVenta, CreateProductoVenta, UpdateProductoVenta, DeleteProductoVenta
 from apps.productos.views import listarVenta, CreateVenta, UpdateVenta, DeleteVenta
 from django.contrib.auth.decorators import login_required
 
@@ -27,13 +26,6 @@ urlpatterns = [
     url(r'^categorias/crear$', CreateCategoria.as_view(), name='categoria_crear'),
     url(r'^categorias/editar/(?P<pk>[\d]+)/$', UpdateCategoria.as_view(), name='categoria_editar'),
     url(r'^categorias/eliminar/(?P<pk>[\d]+)/$', DeleteCategoria.as_view(), name='categoria_eliminar'),
-
-    #Venta Productos
-    url(r'^ventaproductos/listar$', ListProductoVenta.as_view(), name='ventaproducto_listar'),
-    url(r'^ventaproductos/crear$', CreateProductoVenta.as_view(), name='ventaproducto_crear'),
-    url(r'^ventaproductos/editar/(?P<pk>[\d]+)/$', UpdateProductoVenta.as_view(), name='ventaproducto_editar'),
-    url(r'^ventaproductos/eliminar/(?P<pk>[\d]+)/$', DeleteProductoVenta.as_view(), name='ventaproducto_eliminar'),
-
 
     #Venta
     url(r'^venta/listar$', login_required(listarVenta), name='venta_listar'),

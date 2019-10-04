@@ -37,11 +37,10 @@
 				{% endif %}
 			</form>
 
-			{%if perms.cliente.is_usuario%}
+			{%if perms.clientes.is_cliente%}
 			<form class="form-inline ml-5" id="boton">
 				<a href="{% url 'tienda:tienda_crear' user.pk %}" class="btn btn-info mr-xl-2">Registrarme Como Tienda</a>
 			</form>
-			{% else %}
 			{% endif %}
 
 			<!--Logo-->
@@ -124,16 +123,16 @@
 			<form class="form-inline mx-auto">
 				{% csrf_token %}
 				<a href="{% url 'productos:inicio' %}" class="btn btn-outline-light btn-lg mr-5">Inicio</a>
-				{%if perms.cliente.is_usuario%}
-				<a href="{% url 'productos:producto_ofertas' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Ofertas</a>
+				{%if perms.tienda.is_tienda%}
+				<a href="{% url 'productos:producto_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Productos</a>
+				<a href="{% url 'productos:categoria_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Categorias</a>
+				<a href="{% url 'productos:venta_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Ventas</a>
+				{% else %}
 				<div class="dropdown mr-5">
 				<button type="button" class="btn btn-outline-light btn-lg ml-5 mr-5" data-toggle="modal" data-target="#categoria">Categorias</button>
 				<a href="{% url 'productos:pormenosde40' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Por menos de 40.000</a>
 				<a href="{% url 'productos:informacion' %}" class="btn btn-outline-light btn-lg ml-5">Información</a>
-				{% else %}
-				<a href="{% url 'productos:producto_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Productos</a>
-				<a href="{% url 'productos:categoria_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Categorias</a>
-				<a href="{% url 'productos:venta_listar' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Mis Ventas</a>
+				<a href="{% url 'productos:producto_ofertas' %}" class="btn btn-outline-light btn-lg ml-5 mr-5">Ofertas</a>
 				{% endif %}
 			</form>
 		</nav>
@@ -149,15 +148,14 @@
 					<form>
 						<div class="modal-body text-left">
 							<div class="row">
-								<div class="col">
-									{% for categoria in listaCategorias %}
-										<ul>
-											<li>
-												<a href="{% url 'productos:categoria' categoria.id_categoria %}" >{{categoria.nombre}}</a>
-											</li>
-										</ul>
-									{% endfor %}
-								</div>
+								{% for categoria in listaCategorias %}
+									<ul>
+										<li>
+											<a href="{% url 'productos:categoria' categoria.id_categoria %}" >{{categoria.nombre}}</a>
+										</li>
+									</ul>
+								{% endfor %}
+
 							</div>
 						</div>
 					</form>

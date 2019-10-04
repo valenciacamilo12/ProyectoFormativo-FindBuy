@@ -108,7 +108,7 @@ def index(request):
         try:
             listaProductos = ProductoModel.objects.all()
             listaCategorias = CategoriaModel.objects.all()
-
+            print(request.user.id)
             return render(request, 'productos/index.html', {'listaProductos': listaProductos, 'listaCategorias': listaCategorias})
 
         except FileExistsError:
@@ -236,29 +236,4 @@ class ListVenta(ListView):
 
 
 
-#----------------------------Venta Producto--------------------
-
-class CreateProductoVenta(CreateView):
-    model = VentaProducto
-    form_class = VentaProductoForm
-    template_name = 'productos/tienda_form.html'
-    success_url = reverse_lazy('productos:ventaproducto_listar')
-
-
-class DeleteProductoVenta(DeleteView):
-    model = VentaProducto
-    form_class = VentaProductoForm
-    template_name = 'productos/tienda_delete.html'
-    success_url = reverse_lazy('productos:ventaproducto_listar')
-
-
-class UpdateProductoVenta(UpdateView):
-    model = VentaProducto
-    form_class = VentaProductoForm
-    template_name = 'productos/tienda_form.html'
-    success_url = reverse_lazy('productos:ventaproducto_listar')
-
-class ListProductoVenta(ListView):
-    model = VentaProducto
-    template_name = 'productos/tienda_list.html'
 
